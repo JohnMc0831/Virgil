@@ -6,6 +6,7 @@ namespace Virgil
 {
 	public class App : Application
 	{
+	    private static TopicManager topicService;
 		public App ()
 		{
 			// The root page of your application
@@ -36,6 +37,15 @@ namespace Virgil
 		{
 			// Handle when your app resumes
 		}
+
+	    public static TopicManager GetTopicManager()
+	    {
+	        if (topicService != null)
+	        {
+	            topicService = new TopicManager(new Uri("http://virgil.ftltech.org"));
+	        }
+	        return topicService;
+	    }
 	}
 }
 

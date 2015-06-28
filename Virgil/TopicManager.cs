@@ -16,15 +16,12 @@ namespace Virgil
     /// for the Virgil client.  All communications are using RESTful principles,
     /// and also use JSON for serialization.  XML support is not planned.
     /// </summary>
-    class TopicManager
+    public class TopicManager
     {
-        //Intentional hard-code.  
-        private const string WebServerUrl = "http://http://virgil.ftltech.org/";
-
         public HttpClient Client { get; set; }
-        public TopicManager()
+        public TopicManager(Uri WebServiceUri)
         {
-            Client = new HttpClient { BaseAddress = new Uri(WebServerUrl) };
+            Client = new HttpClient { BaseAddress = WebServiceUri };
         }
 
         /// <summary>

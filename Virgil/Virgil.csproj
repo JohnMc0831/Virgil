@@ -35,8 +35,9 @@
     <Compile Include="Medium.cs" />
     <Compile Include="Reference.cs" />
     <Compile Include="Topic.cs" />
-    <Compile Include="TopicList.cs" />
     <Compile Include="TopicManager.cs" />
+    <Compile Include="ViewModels\TopicsViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="Virgil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -61,4 +62,5 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
 </Project>
