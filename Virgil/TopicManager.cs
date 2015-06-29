@@ -29,9 +29,9 @@ namespace Virgil
         /// for consumption by platform-specific clients.
         /// </summary>
         /// <returns>List<Topic></returns>
-        public async Task<List<Topic>> GetTopicsAsync()
+        public List<Topic> GetTopics()
         {
-            var response = await Client.GetAsync("/api/Topics");
+            HttpResponseMessage response = Client.GetAsync("/api/Topics").Result;          
             var topicsJson = response.Content.ReadAsStringAsync().Result;
             var listTopics = JsonConvert.DeserializeObject<List<Topic>>(topicsJson);
             return listTopics;
@@ -44,7 +44,7 @@ namespace Virgil
         /// <returns>Topic</returns>
         public async Task<Topic> GetTopicAsync(Int32 id)
         {
-            var response = await Client.GetAsync($"/api/Topics/{id}");
+			var response = await Client.GetAsync(string.Format("/api/Topics/{0}", id));
             var topicJson = response.Content.ReadAsStringAsync().Result;
             var topic = JsonConvert.DeserializeObject<Topic>(topicJson);
             return topic;

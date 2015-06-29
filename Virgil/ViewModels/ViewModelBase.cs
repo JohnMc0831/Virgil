@@ -12,9 +12,9 @@ namespace Virgil.ViewModels
     {
         private bool loading;
 
-        public ViewModelBase(INavigation navigation)
+        public ViewModelBase() //INavigation navigation
         {
-            Navigation = navigation;
+            //Navigation = navigation;
         }
         
         public bool IsLoading
@@ -36,7 +36,7 @@ namespace Virgil.ViewModels
         }
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public INavigation Navigation { get; }
+        //public INavigation Navigation { get; }
     }
 }
 

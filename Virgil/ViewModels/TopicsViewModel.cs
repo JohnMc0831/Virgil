@@ -10,9 +10,9 @@ using Xamarin.Forms;
 
 namespace Virgil.ViewModels
 {
-    public class AuctionsViewModel : ViewModelBase, INotifyPropertyChanged
+    public class TopicsViewModel : ViewModelBase, INotifyPropertyChanged
     {
-        public AuctionsViewModel(INavigation navigation) : base(navigation)
+        public TopicsViewModel() : base()
         {
         }
 
@@ -54,17 +54,14 @@ namespace Virgil.ViewModels
             }
                
             IsLoading = true;
-            App.GetTopicManager().GetTopicsAsync().ContinueWith(gmit => {
-                if(gmit.Exception == null)
-                {
-                    myTopics = new ObservableCollection<Topic>(gmit.Result);
-                }
-                else
-                {
-                    //Notify of error
-                }
-                IsLoading = false;
-            });
+            var topicList = App.GetTopicManager().GetTopics();
+            ObservableCollection<Topic> collTopics = new ObservableCollection<Topic>();
+            foreach (var t in topicList)
+            {
+                collTopics.Add(t);
+            }
+            Topics = collTopics;
+            IsLoading = false;
         }
     }
 }
