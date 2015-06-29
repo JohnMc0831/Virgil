@@ -19,7 +19,9 @@ namespace Virgil
                 FontAttributes = FontAttributes.Italic,
                 FontSize = 20,
                 BackgroundColor = Color.White,
-                TextColor = Color.Maroon
+                TextColor = Color.Green,
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.CenterAndExpand
             };
             
             var topicsStack = new StackLayout()
