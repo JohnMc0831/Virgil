@@ -12,56 +12,68 @@ namespace Virgil
     {
         public VirgilContentPage()
         {
-            List<View> contentItems = new List<View>();
-            var title = new Label()
-            {
-                Text = "Greetings! I am Virgil.  Let me be your guide...",
-                FontAttributes = FontAttributes.Italic,
-                FontSize = 20,
-                BackgroundColor = Color.White,
-                TextColor = Color.Green,
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.CenterAndExpand
-            };
-            
-            var topicsStack = new StackLayout()
-            {
-                Padding = 5,
-                Spacing = 0,            
-            };
-            
+            Title = "I am Virgil";
+            Icon = new FileImageSource() {File = "Icon-Small-40.png"};
             var topicsVM = new TopicsViewModel();
             topicsVM.Load();
             var topics = topicsVM.Topics;
-            var topicLabels = new List<Label>();
-            foreach (var t in topics)
-            {
-                var topicLabel = new Label()
-                {
-                    Text = t.Title,
-                    FontAttributes = FontAttributes.Bold,
-                    FontSize = 14,
-                    BackgroundColor = string.IsNullOrEmpty(t.BackColor) ? Color.Green : Color.FromHex(t.BackColor),
-                    TextColor = string.IsNullOrEmpty(t.TextColor) ? Color.White : Color.FromHex(t.TextColor)
-                };
-                topicsStack.Children.Add(topicLabel);
-            }
 
-            var stackLayout = new StackLayout
+            var topicsListView = new ListView()
             {
+                RowHeight = 40
+            };
+            topicsListView.ItemsSource = topics;
+            topicsListView.ItemTemplate = new DataTemplate(typeof(TopicCell));
+
+            topicsListView.ItemSelected += async (sender, e) =>
+            {
+                var topic = (Topic) e.SelectedItem;
+                await Navigation.PushAsync(new VirgilTopicPage(topic));
+                //await DisplayAlert("Tapped!", topic.Title + " was tapped.", "OK");
+            };
+
+
+            var titleStack = new StackLayout
+            {
+                Orientation = StackOrientation.Horizontal,
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+                Spacing = 10,
                 Children =
                 {
-                    title,
-                    topicsStack
+                    new Image
+                    {
+                        Source = "Icon-Small-40.png",
+                    },
+                    new StackLayout
+                    {
+                        Orientation = StackOrientation.Horizontal,
+                        HorizontalOptions = LayoutOptions.StartAndExpand,
+                        Children = {
+                            new Label()
+                            {
+                                Text = "Your Patient Survival Guide",
+                                TextColor = Color.Silver,
+                                FontSize = 12
+                            }
+                        }
+                    }
                 }
             };
 
             if (Device.OS == TargetPlatform.iOS)
             {
                 // move layout under the status bar
-                stackLayout.Padding = new Thickness(0, 20, 0, 0);
+               // this.Padding = new Thickness(0, 20, 0, 0);
             }
-            this.Content = stackLayout;
+
+            this.Content = new StackLayout
+            {
+                Children =
+                {
+                    titleStack,
+                    topicsListView
+                }
+            };
         }
     }
 }

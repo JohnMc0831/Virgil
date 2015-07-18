@@ -4,6 +4,8 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Xamarin.Forms;
+using Xamarin.Themes;
 
 namespace Virgil.iOS
 {
@@ -14,14 +16,11 @@ namespace Virgil.iOS
 		{
 			global::Xamarin.Forms.Forms.Init ();
 
-			// Code for starting up the Xamarin Test Cloud Agent
-			#if ENABLE_TEST_CLOUD
-			Xamarin.Calabash.Start();
-			#endif
+            GunmetalTheme.Apply();
+            
+            LoadApplication (new App ());
 
-			LoadApplication (new App ());
-
-			return base.FinishedLaunching (app, options);
+            return base.FinishedLaunching (app, options);
 		}
 	}
 }
