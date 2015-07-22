@@ -8,38 +8,37 @@ using Xamarin.Forms;
 
 namespace Virgil
 {
-    class TopicCell : ViewCell
+    public class TopicCell : ViewCell
     {
         public string Text { get; set; }
+
+        public string ImageUri { get; set; }
+
         public TopicCell()
         {
-            var image = new Image
+            ImageUri = "http://lorempixel.com/60/60/cats/";
+            var image = new Xamarin.Forms.Image()
             {
-                HorizontalOptions = LayoutOptions.Start
+                HorizontalOptions = LayoutOptions.Start,
+                Source = new Uri(ImageUri)
             };
-           // image.SetBinding(Image.SourceProperty, new Binding("ImageUri"));
+
+            image.WidthRequest = image.HeightRequest = 60;
 
             var title = new Label();
-            title.SetBinding(Label.TextProperty, "Title");
-            
-
-            image.WidthRequest = image.HeightRequest = 40;
-            image.Source = new Uri("http://www.placebear.com/40/40");  //For demo purposes.
-
+            title.SetBinding(Label.TextProperty, "Title");   
             var topicLayout = CreateTopicLayout();
-
             var viewLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
-                Children = { image, topicLayout}
+                Children = {image, topicLayout} 
             };
             View = viewLayout;
             Text = title.Text;
         }
 
-        static StackLayout CreateTopicLayout()
+        public static StackLayout CreateTopicLayout()
         {
-
             var titleLabel = new Label
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand
@@ -52,7 +51,8 @@ namespace Virgil
             var detailLabel = new Label
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                FontSize = Device.OnPlatform(10f, 10f, 10f)
+                FontSize = Device.OnPlatform(10f, 10f, 10f),
+                HeightRequest = 60f
             };
             detailLabel.SetBinding(Label.TextProperty, "Summary");
 

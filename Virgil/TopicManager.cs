@@ -44,7 +44,7 @@ namespace Virgil
         /// <returns>Topic</returns>
         public async Task<Topic> GetTopicAsync(Int32 id)
         {
-			var response = await Client.GetAsync(string.Format("/api/Topics/{0}", id));
+			var response = await Client.GetAsync($"/api/Topics/{id}");
             var topicJson = response.Content.ReadAsStringAsync().Result;
             var topic = JsonConvert.DeserializeObject<Topic>(topicJson);
             return topic;

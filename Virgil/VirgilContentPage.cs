@@ -22,6 +22,7 @@ namespace Virgil
             {
                 RowHeight = 40
             };
+
             topicsListView.ItemsSource = topics;
             topicsListView.ItemTemplate = new DataTemplate(typeof(TopicCell));
 
@@ -29,7 +30,6 @@ namespace Virgil
             {
                 var topic = (Topic) e.SelectedItem;
                 await Navigation.PushAsync(new VirgilTopicPage(topic));
-                //await DisplayAlert("Tapped!", topic.Title + " was tapped.", "OK");
             };
 
 

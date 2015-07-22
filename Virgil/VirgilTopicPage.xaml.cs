@@ -15,7 +15,7 @@ namespace Virgil
 	    public VirgilTopicPage(Topic topic)
 	    {
             InitializeComponent();
-            //Bind the topic to the view...for new just a label:
+            //Bind the topic to the view using a WebView component to render the HTML.
 	        Title = topic.Title;
             var webView = new WebView();
             var htmlSource = new HtmlWebViewSource();
