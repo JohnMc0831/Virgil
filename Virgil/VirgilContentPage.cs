@@ -15,7 +15,7 @@ namespace Virgil
             Title = "I am Virgil";
             Icon = new FileImageSource() {File = "Icon-Small-40.png"};
             var topicsVM = new TopicsViewModel();
-            topicsVM.Load();
+            //topicsVM.Load();
             var topics = topicsVM.Topics;
 
             var topicsListView = new ListView()

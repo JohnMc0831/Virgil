@@ -16,14 +16,14 @@ namespace Virgil
 
         public TopicCell()
         {
-            ImageUri = "http://lorempixel.com/60/60/cats/";
-            var image = new Xamarin.Forms.Image()
-            {
-                HorizontalOptions = LayoutOptions.Start,
-                Source = new Uri(ImageUri)
-            };
+            //ImageUri = "http://lorempixel.com/60/60/cats/";
+            //var image = new Xamarin.Forms.Image()
+            //{
+            //    HorizontalOptions = LayoutOptions.Start,
+            //    Source = new Uri(ImageUri)
+            //};
 
-            image.WidthRequest = image.HeightRequest = 60;
+            //image.WidthRequest = image.HeightRequest = 60;
 
             var title = new Label();
             title.SetBinding(Label.TextProperty, "Title");   
@@ -31,7 +31,7 @@ namespace Virgil
             var viewLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
-                Children = {image, topicLayout} 
+                Children = {topicLayout} 
             };
             View = viewLayout;
             Text = title.Text;

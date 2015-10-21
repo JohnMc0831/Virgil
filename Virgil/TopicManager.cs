@@ -31,7 +31,7 @@ namespace Virgil
         /// <returns>List<Topic></returns>
         public List<Topic> GetTopics()
         {
-            HttpResponseMessage response = Client.GetAsync("/api/Topics").Result;          
+            HttpResponseMessage response =  Client.GetAsync("/api/Topics").Result;   
             var topicsJson = response.Content.ReadAsStringAsync().Result;
             var listTopics = JsonConvert.DeserializeObject<List<Topic>>(topicsJson);
             return listTopics;

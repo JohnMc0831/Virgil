@@ -39,7 +39,7 @@
     <Compile Include="TopicManager.cs" />
     <Compile Include="ViewModels\TopicsViewModel.cs" />
     <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Virgil.cs" />
+    <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VirgilContentPage.cs" />
     <Compile Include="VirgilTopicPage.xaml.cs">

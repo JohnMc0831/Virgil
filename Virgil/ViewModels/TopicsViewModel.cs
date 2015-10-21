@@ -14,8 +14,24 @@ namespace Virgil.ViewModels
     {
         public TopicsViewModel() : base()
         {
-        }
+            //escape if already loaded
+            if (Topics != null)
+            {
+                return;
+            }
 
+            IsLoading = true;
+            var topicList = App.GetTopicManager().GetTopics();
+            List<Topic> topics = topicList;
+            ObservableCollection<Topic> collTopics = new ObservableCollection<Topic>();
+            foreach (var t in topics)
+            {
+                collTopics.Add(t);
+            }
+            Topics = collTopics;
+            IsLoading = false;
+        }
+        
         private ObservableCollection<Topic> myTopics;
 
         public ObservableCollection<Topic> MyTopics
@@ -45,23 +61,23 @@ namespace Virgil.ViewModels
             }
         }
 
-        public void Load()
-        {
-            //escape if already loaded
-            if (Topics != null)
-            {
-                 return;
-            }
+        //public async void Load()
+        //{
+        //    //escape if already loaded
+        //    if (Topics != null)
+        //    {
+        //         return;
+        //    }
                
-            IsLoading = true;
-            var topicList = App.GetTopicManager().GetTopics();
-            ObservableCollection<Topic> collTopics = new ObservableCollection<Topic>();
-            foreach (var t in topicList)
-            {
-                collTopics.Add(t);
-            }
-            Topics = collTopics;
-            IsLoading = false;
-        }
+        //    IsLoading = true;
+        //    var topicList =  await App.GetTopicManager().GetTopics();
+        //    ObservableCollection<Topic> collTopics = new ObservableCollection<Topic>();
+        //    foreach (var t in topicList)
+        //    {
+        //        collTopics.Add(t);
+        //    }
+        //    Topics = collTopics;
+        //    IsLoading = false;
+        //}
     }
 }
