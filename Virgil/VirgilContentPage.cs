@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +14,14 @@ namespace Virgil
         public VirgilContentPage()
         {
             Title = "I am Virgil";
-            Icon = new FileImageSource() {File = "Icon-Small-40.png"};
+            Icon = new FileImageSource() { File = "Icon-Small-40.png" };
             var topicsVM = new TopicsViewModel();
-            //topicsVM.Load();
-            var topics = topicsVM.Topics;
-
+            var topics = new ObservableCollection<Topic>();
+            Device.BeginInvokeOnMainThread(() => {
+                topicsVM.Load();
+                topics = topicsVM.Topics;
+            });
+            
             var topicsListView = new ListView()
             {
                 RowHeight = 40
@@ -52,7 +56,7 @@ namespace Virgil
                             new Label()
                             {
                                 Text = "Your Patient Survival Guide",
-                                TextColor = Color.Silver,
+                                TextColor = Color.Green,
                                 FontSize = 12
                             }
                         }

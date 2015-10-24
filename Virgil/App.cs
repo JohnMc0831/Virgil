@@ -10,7 +10,7 @@ namespace Virgil
 		public App ()
 		{
 			// root page 
-		    MainPage = new NavigationPage(new VirgilContentPage());
+		    this.MainPage = new NavigationPage(new VirgilContentPage());
 		}
 
 		protected override void OnStart ()
