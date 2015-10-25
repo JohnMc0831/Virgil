@@ -46,20 +46,18 @@ namespace Virgil.ViewModels
 
         public async void Load()
         {
+            IsLoading = true;
             //escape if already loaded
             if (Topics != null)
             {
                 return;
             }
-
-            IsLoading = true;
+            Topics = new ObservableCollection<Topic>();
             var topicList = await App.GetTopicManager().GetTopics();
-            ObservableCollection<Topic> collTopics = new ObservableCollection<Topic>();
             foreach (var t in topicList)
             {
-                collTopics.Add(t);
+                Topics.Add(t);
             }
-            Topics = collTopics;
             IsLoading = false;
         }
     }

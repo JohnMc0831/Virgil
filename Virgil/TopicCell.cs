@@ -28,11 +28,11 @@ namespace Virgil
 
             var topicLayout = CreateTopicLayout();
 
-            //var viewLayout = new StackLayout()
-            //{
-            //    Orientation = StackOrientation.Horizontal,
-            //    Children = { image, topicLayout}
-            //};
+            var viewLayout = new StackLayout()
+            {
+                Orientation = StackOrientation.Horizontal,
+                Children = { topicLayout }
+            };
             View = topicLayout;
             Text = title.Text;
         }

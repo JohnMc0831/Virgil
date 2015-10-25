@@ -16,11 +16,10 @@ namespace Virgil
             Icon = new FileImageSource() {File = "Icon-Small-40.png"};
             var topicsVM = new TopicsViewModel();
             topicsVM.Load();
-            var topics = topicsVM.Topics;
             var topicsListView = new ListView();
             topicsListView.RowHeight = 40;
             topicsListView.ItemTemplate = new DataTemplate(typeof(TopicCell));
-            topicsListView.ItemsSource = topics;
+            topicsListView.ItemsSource = topicsVM.Topics;
             topicsListView.ItemSelected += async (sender, e) =>
             {
                 var topic = (Topic) e.SelectedItem;
