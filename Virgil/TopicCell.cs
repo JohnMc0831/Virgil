@@ -28,12 +28,12 @@ namespace Virgil
             var title = new Label();
             title.SetBinding(Label.TextProperty, "Title");   
             var topicLayout = CreateTopicLayout();
-            var viewLayout = new StackLayout()
-            {
-                Orientation = StackOrientation.Horizontal,
-                Children = {topicLayout} 
-            };
-            View = viewLayout;
+            //var viewLayout = new StackLayout()
+            //{
+            //    Orientation = StackOrientation.Horizontal,
+            //    Children = {topicLayout} 
+            //};
+            View = topicLayout;
             Text = title.Text;
         }
 

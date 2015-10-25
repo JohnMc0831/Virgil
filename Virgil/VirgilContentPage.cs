@@ -22,7 +22,7 @@ namespace Virgil
             var topicsListView = new ListView();
             topicsListView.RowHeight = 40;
             topicsListView.ItemTemplate = new DataTemplate(typeof(TopicCell));           
-            topicsListView.ItemsSource = Model.Topics.ToList();
+            topicsListView.ItemsSource = Model.Topics;
             topicsListView.ItemSelected += async (sender, e) =>
             {
                 var topic = (Topic) e.SelectedItem;
