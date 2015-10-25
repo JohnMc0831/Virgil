@@ -8,37 +8,38 @@ using Xamarin.Forms;
 
 namespace Virgil
 {
-    public class TopicCell : ViewCell
+    class TopicCell : ViewCell
     {
         public string Text { get; set; }
-
-        public string ImageUri { get; set; }
-
         public TopicCell()
         {
-            //ImageUri = "http://lorempixel.com/60/60/cats/";
-            //var image = new Xamarin.Forms.Image()
+            //var image = new Image
             //{
-            //    HorizontalOptions = LayoutOptions.Start,
-            //    Source = new Uri(ImageUri)
+            //    HorizontalOptions = LayoutOptions.Start
             //};
-
-            //image.WidthRequest = image.HeightRequest = 60;
+           // image.SetBinding(Image.SourceProperty, new Binding("ImageUri"));
 
             var title = new Label();
-            title.SetBinding(Label.TextProperty, "Title");   
+            title.SetBinding(Label.TextProperty, "Title");
+            
+
+           // image.WidthRequest = image.HeightRequest = 40;
+           // image.Source = new Uri("http://www.placebear.com/40/40");  //For demo purposes.
+
             var topicLayout = CreateTopicLayout();
-            var viewLayout = new StackLayout()
-            {
-                Orientation = StackOrientation.Horizontal,
-                Children = {topicLayout} 
-            };
-            View = viewLayout;
+
+            //var viewLayout = new StackLayout()
+            //{
+            //    Orientation = StackOrientation.Horizontal,
+            //    Children = { image, topicLayout}
+            //};
+            View = topicLayout;
             Text = title.Text;
         }
 
-        public static StackLayout CreateTopicLayout()
+        static StackLayout CreateTopicLayout()
         {
+
             var titleLabel = new Label
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand
@@ -51,8 +52,7 @@ namespace Virgil
             var detailLabel = new Label
             {
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                FontSize = Device.OnPlatform(10f, 10f, 10f),
-                HeightRequest = 60f
+                FontSize = Device.OnPlatform(10f, 10f, 10f)
             };
             detailLabel.SetBinding(Label.TextProperty, "Summary");
 
