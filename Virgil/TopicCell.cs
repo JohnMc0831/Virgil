@@ -13,27 +13,27 @@ namespace Virgil
         public string Text { get; set; }
         public TopicCell()
         {
-            var image = new Image
-            {
-                HorizontalOptions = LayoutOptions.Start
-            };
+            //var image = new Image
+            //{
+            //    HorizontalOptions = LayoutOptions.Start
+            //};
            // image.SetBinding(Image.SourceProperty, new Binding("ImageUri"));
 
             var title = new Label();
             title.SetBinding(Label.TextProperty, "Title");
             
 
-            image.WidthRequest = image.HeightRequest = 40;
-            image.Source = new Uri("http://www.placebear.com/40/40");  //For demo purposes.
+           // image.WidthRequest = image.HeightRequest = 40;
+           // image.Source = new Uri("http://www.placebear.com/40/40");  //For demo purposes.
 
             var topicLayout = CreateTopicLayout();
 
-            var viewLayout = new StackLayout()
-            {
-                Orientation = StackOrientation.Horizontal,
-                Children = { image, topicLayout}
-            };
-            View = viewLayout;
+            //var viewLayout = new StackLayout()
+            //{
+            //    Orientation = StackOrientation.Horizontal,
+            //    Children = { image, topicLayout}
+            //};
+            View = topicLayout;
             Text = title.Text;
         }
 
@@ -46,8 +46,8 @@ namespace Virgil
             };
 
             titleLabel.SetBinding(Label.TextProperty, "Title");
-            titleLabel.SetBinding(VisualElement.BackgroundColorProperty, "BackColor");
-            titleLabel.SetBinding(Label.TextColorProperty, "TextColor");
+            //titleLabel.SetBinding(VisualElement.BackgroundColorProperty, "BackColor");
+            //titleLabel.SetBinding(Label.TextColorProperty, "TextColor");
 
             var detailLabel = new Label
             {

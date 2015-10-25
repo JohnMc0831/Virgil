@@ -30,7 +30,7 @@ namespace Virgil
 
 	    public static TopicManager GetTopicManager()
 	    {
-	        return topicService ?? (topicService = new TopicManager(new Uri("http://surviveadmin.azurewebsites.net")));
+	        return topicService ?? (topicService = new TopicManager(new Uri("http://virgil.ftltech.org")));
 	    }
 	}
 }

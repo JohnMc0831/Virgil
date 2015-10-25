@@ -17,21 +17,16 @@ namespace Virgil
             var topicsVM = new TopicsViewModel();
             topicsVM.Load();
             var topics = topicsVM.Topics;
-
-            var topicsListView = new ListView()
-            {
-                RowHeight = 40
-            };
-            topicsListView.ItemsSource = topics;
+            var topicsListView = new ListView();
+            topicsListView.RowHeight = 40;
             topicsListView.ItemTemplate = new DataTemplate(typeof(TopicCell));
-
+            topicsListView.ItemsSource = topics;
             topicsListView.ItemSelected += async (sender, e) =>
             {
                 var topic = (Topic) e.SelectedItem;
                 await Navigation.PushAsync(new VirgilTopicPage(topic));
                 //await DisplayAlert("Tapped!", topic.Title + " was tapped.", "OK");
             };
-
 
             var titleStack = new StackLayout
             {
