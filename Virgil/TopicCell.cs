@@ -45,8 +45,8 @@ namespace Virgil
             };
 
             titleLabel.SetBinding(Label.TextProperty, "Title");
-            titleLabel.SetBinding(VisualElement.BackgroundColorProperty, "BackColor");
-            titleLabel.SetBinding(Label.TextColorProperty, "TextColor");
+            //titleLabel.SetBinding(VisualElement.BackgroundColorProperty, "BackColor");
+            //titleLabel.SetBinding(Label.TextColorProperty, "TextColor");
 
             var detailLabel = new Label
             {

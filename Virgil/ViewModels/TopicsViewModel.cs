@@ -13,25 +13,7 @@ namespace Virgil.ViewModels
     public class TopicsViewModel : ViewModelBase, INotifyPropertyChanged
     {
         public TopicsViewModel() : base()
-        {
-            //escape if already loaded
-            //if (Topics != null)
-            //{
-            //    return;
-            //}
-
-            //IsLoading = true;
-            //var topicMgr = App.GetTopicManager();
-            //var topicList = await topicMgr.GetTopics();
-            //List<Topic> topics = topicList;
-            //ObservableCollection<Topic> collTopics = new ObservableCollection<Topic>();
-            //foreach (var t in topics)
-            //{
-            //    collTopics.Add(t);
-            //}
-            //Topics = collTopics;
-            //IsLoading = false;
-        }
+        {}
         
         private ObservableCollection<Topic> myTopics;
 

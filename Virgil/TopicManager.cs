@@ -25,7 +25,7 @@ namespace Virgil
         }
 
         /// <summary>
-        /// GetTopicsAsync() returns an IList<Topic>
+        /// GetTopics() returns an IList<Topic>
         /// for consumption by platform-specific clients.
         /// </summary>
         /// <returns>List<Topic></returns>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Virgil.ViewModels;
@@ -11,31 +12,22 @@ namespace Virgil
 {
     public class VirgilContentPage : ContentPage
     {
+        public TopicsViewModel Model { get; set; }
         public VirgilContentPage()
         {
             Title = "I am Virgil";
             Icon = new FileImageSource() { File = "Icon-Small-40.png" };
-            var topicsVM = new TopicsViewModel();
-            var topics = new ObservableCollection<Topic>();
-            Device.BeginInvokeOnMainThread(() => {
-                topicsVM.Load();
-                topics = topicsVM.Topics;
-            });
-            
-            var topicsListView = new ListView()
-            {
-                RowHeight = 40
-            };
-
-            topicsListView.ItemsSource = topics;
-            topicsListView.ItemTemplate = new DataTemplate(typeof(TopicCell));
-
+            Model = new TopicsViewModel();
+            Model.Load();
+            var topicsListView = new ListView();
+            topicsListView.RowHeight = 40;
+            topicsListView.ItemTemplate = new DataTemplate(typeof(TopicCell));           
+            topicsListView.ItemsSource = Model.Topics.ToList();
             topicsListView.ItemSelected += async (sender, e) =>
             {
                 var topic = (Topic) e.SelectedItem;
                 await Navigation.PushAsync(new VirgilTopicPage(topic));
             };
-
 
             var titleStack = new StackLayout
             {
