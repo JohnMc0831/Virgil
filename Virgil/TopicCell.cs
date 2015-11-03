@@ -13,47 +13,45 @@ namespace Virgil
         public string Text { get; set; }
         public TopicCell()
         {
-            //var image = new Image
-            //{
-            //    HorizontalOptions = LayoutOptions.Start
-            //};
-           // image.SetBinding(Image.SourceProperty, new Binding("ImageUri"));
+            var appIcon = new Image
+            {
+                HorizontalOptions = LayoutOptions.Start,
+                Source = ImageSource.FromFile("waypoint.png"),
+                HeightRequest = 40
+            };
 
             var title = new Label();
             title.SetBinding(Label.TextProperty, "Title");
-            
-
-           // image.WidthRequest = image.HeightRequest = 40;
-           // image.Source = new Uri("http://www.placebear.com/40/40");  //For demo purposes.
 
             var topicLayout = CreateTopicLayout();
 
             var viewLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
-                Children = { topicLayout }
+                Children = { appIcon, topicLayout }
             };
-            View = topicLayout;
+            View = viewLayout;
             Text = title.Text;
+            
         }
 
         static StackLayout CreateTopicLayout()
-        {
-
+        {           
             var titleLabel = new Label
             {
-                HorizontalOptions = LayoutOptions.FillAndExpand
+                HorizontalOptions = LayoutOptions.StartAndExpand
             };
 
             titleLabel.SetBinding(Label.TextProperty, "Title");
-            //titleLabel.SetBinding(VisualElement.BackgroundColorProperty, "BackColor");
-            //titleLabel.SetBinding(Label.TextColorProperty, "TextColor");
+            titleLabel.TextColor = Color.Default;
 
             var detailLabel = new Label
             {
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-                FontSize = Device.OnPlatform(10f, 10f, 10f)
-            };
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+                FontSize = Device.OnPlatform(10f, 10f, 10f),
+                TextColor = Color.Gray
+            };              
+
             detailLabel.SetBinding(Label.TextProperty, "Summary");
 
             var topicLayout = new StackLayout()

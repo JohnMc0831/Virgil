@@ -12,8 +12,12 @@ namespace Virgil
     {
         public VirgilContentPage()
         {
-            Title = "I am Virgil";
-            Icon = new FileImageSource() {File = "Icon-Small-40.png"};
+            Title = "Hospital Patient Navigator";
+            Icon = new FileImageSource
+            {
+                File = "Icon.png"
+            };
+
             var topicsVM = new TopicsViewModel();
             topicsVM.Load();
             var topicsListView = new ListView();
@@ -24,7 +28,6 @@ namespace Virgil
             {
                 var topic = (Topic) e.SelectedItem;
                 await Navigation.PushAsync(new VirgilTopicPage(topic));
-                //await DisplayAlert("Tapped!", topic.Title + " was tapped.", "OK");
             };
 
             var titleStack = new StackLayout
@@ -34,10 +37,10 @@ namespace Virgil
                 Spacing = 10,
                 Children =
                 {
-                    new Image
-                    {
-                        Source = "Icon-Small-40.png",
-                    },
+                    //new Image
+                    //{
+                    //    Source = "HPN.png",
+                    //},
                     new StackLayout
                     {
                         Orientation = StackOrientation.Horizontal,
@@ -45,7 +48,7 @@ namespace Virgil
                         Children = {
                             new Label()
                             {
-                                Text = "Your Patient Survival Guide",
+                                Text = "Hospital Patient Navigator",
                                 TextColor = Color.Silver,
                                 FontSize = 12
                             }
@@ -64,7 +67,7 @@ namespace Virgil
             {
                 Children =
                 {
-                    titleStack,
+                    //titleStack,
                     topicsListView
                 }
             };

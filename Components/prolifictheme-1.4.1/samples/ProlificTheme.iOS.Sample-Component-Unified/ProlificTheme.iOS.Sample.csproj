@@ -11,6 +11,7 @@
     <RootNamespace>ThemeSample</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <ReleaseVersion>0.1.1.1</ReleaseVersion>
+    <AssemblyName>BlackLeatherThemeSampleiOS</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>True</DebugSymbols>
