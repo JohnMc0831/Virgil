@@ -15,7 +15,7 @@ namespace Virgil
             Title = "Hospital Patient Navigator";
             Icon = new FileImageSource
             {
-                File = "Icon.png"
+                File = "HPN.png"
             };
 
             var topicsVM = new TopicsViewModel();
