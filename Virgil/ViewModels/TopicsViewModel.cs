@@ -48,10 +48,10 @@ namespace Virgil.ViewModels
         {
             IsLoading = true;
             //escape if already loaded
-            if (Topics != null)
-            {
-                return;
-            }
+            //if (Topics != null)
+            //{
+            //    return;
+            //}
             Topics = new ObservableCollection<Topic>();
             var topicList = await App.GetTopicManager().GetTopics();
             foreach (var t in topicList)
