@@ -41,7 +41,7 @@ namespace Virgil
 
                 throw GetTopicsAsyncException;
             }
-            
+
             var topicsJson = response.Content.ReadAsStringAsync().Result;
             var listTopics = JsonConvert.DeserializeObject<List<Topic>>(topicsJson);
             return listTopics;

@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virgil.iOS", "iOS\Virgil.iO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virgil.Droid", "Droid\Virgil.Droid.csproj", "{4D5F16CB-E9A5-4BFB-8F09-6EF37F91282C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virgil.UITests", "UITests\Virgil.UITests.csproj", "{CFD80F21-A670-4608-9864-D05A74A1CD51}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,7 +50,6 @@ Global
 		{4D5F16CB-E9A5-4BFB-8F09-6EF37F91282C}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{4D5F16CB-E9A5-4BFB-8F09-6EF37F91282C}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{4D5F16CB-E9A5-4BFB-8F09-6EF37F91282C}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{4D5F16CB-E9A5-4BFB-8F09-6EF37F91282C}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{4D5F16CB-E9A5-4BFB-8F09-6EF37F91282C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D5F16CB-E9A5-4BFB-8F09-6EF37F91282C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D5F16CB-E9A5-4BFB-8F09-6EF37F91282C}.Release|iPhone.ActiveCfg = Release|Any CPU

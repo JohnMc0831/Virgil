@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -23,21 +24,23 @@ namespace Virgil
             }
         }
 
-        private void ExecuteTopicRefreshCommand()
+        void OnRefresh(object sender, EventArgs e)
         {
-            if (IsBusy)
-            {
-                return;
-            }
-
             IsBusy = true;
-            RefreshTopicsCommand.ChangeCanExecute();
-            
+            var list = (ListView) sender;
+            list.IsRefreshing = true;
             //Load Topics
             TopicsViewModel.Load();
-            
+
+            list.ItemsSource = null;  //force a refresh of the listview.  See Xamarin bug #26418 discussed here: https://forums.xamarin.com/discussion/18631/listview-binding-to-observablecollection-does-not-update-gui/p1
+            list.ItemsSource = TopicsViewModel.Topics;
+            list.IsRefreshing = false;
             IsBusy = false;
-            RefreshTopicsCommand.ChangeCanExecute();
+        }
+
+        private void ExecuteTopicRefreshCommand()
+        {
+            OnRefresh(this, new EventArgs());
         } 
 
         public VirgilContentPage()
@@ -48,39 +51,31 @@ namespace Virgil
                 File = "HPN.png"
             };
 
+            Grid grid = new Grid();
+            grid.VerticalOptions = LayoutOptions.FillAndExpand;
+            grid.RowDefinitions.Add(new RowDefinition()
+            {
+                Height = GridLength.Auto
+            });
+            
             TopicsViewModel = new TopicsViewModel();
             //TODO:  Add loading page here...
             TopicsViewModel.Load();
-            var topicsListView = new ListView
+            var topicsListView = new ListView()
             {
                 RowHeight = 40,
                 ItemTemplate = new DataTemplate(typeof (TopicCell)),
                 ItemsSource = TopicsViewModel.Topics,
-                IsPullToRefreshEnabled = true,
+                IsPullToRefreshEnabled = true
             };
-
-            topicsListView.RefreshCommand = new Command(() =>
-            {
-                if (IsBusy)
-                {
-                    return;
-                }
-
-                IsBusy = true;
-                RefreshTopicsCommand.ChangeCanExecute();
-
-                //Load Topics
-                TopicsViewModel.Load();
-
-                IsBusy = false;
-                RefreshTopicsCommand.ChangeCanExecute();
-            });
-
+            topicsListView.Refreshing += OnRefresh;
             topicsListView.ItemSelected += async (sender, e) =>
             {
                 var topic = (Topic) e.SelectedItem;
                 await Navigation.PushAsync(new VirgilTopicPage(topic));
             };
+
+            grid.Children.Add(topicsListView);
 
             var titleStack = new StackLayout
             {
@@ -89,10 +84,6 @@ namespace Virgil
                 Spacing = 10,
                 Children =
                 {
-                    //new Image
-                    //{
-                    //    Source = "HPN.png",
-                    //},
                     new StackLayout
                     {
                         Orientation = StackOrientation.Horizontal,
@@ -112,14 +103,13 @@ namespace Virgil
             if (Device.OS == TargetPlatform.iOS)
             {
                 // move layout under the status bar
-               // this.Padding = new Thickness(0, 20, 0, 0);
+               this.Padding = new Thickness(0, 20, 0, 0);
             }
 
             this.Content = new StackLayout
             {
                 Children =
                 {
-                    //titleStack,
                     topicsListView
                 }
             };
