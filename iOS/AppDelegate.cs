@@ -14,12 +14,8 @@ namespace Virgil.iOS
 	{
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
-			global::Xamarin.Forms.Forms.Init ();
-
-            GunmetalTheme.Apply();
-            
-            LoadApplication (new App ());
-
+			global::Xamarin.Forms.Forms.Init();
+            LoadApplication(new Virgil.App());
             return base.FinishedLaunching (app, options);
 		}
 	}

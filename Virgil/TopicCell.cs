@@ -16,24 +16,24 @@ namespace Virgil
 
         public TopicCell()
         {
-            ImageUri = "http://lorempixel.com/60/60/cats/";
-            var image = new Xamarin.Forms.Image()
-            {
-                HorizontalOptions = LayoutOptions.Start,
-                Source = new Uri(ImageUri)
-            };
+            //ImageUri = "http://lorempixel.com/60/60/cats/";
+            //var image = new Xamarin.Forms.Image()
+            //{
+            //    HorizontalOptions = LayoutOptions.Start,
+            //    Source = new Uri(ImageUri)
+            //};
 
-            image.WidthRequest = image.HeightRequest = 60;
+            //image.WidthRequest = image.HeightRequest = 60;
 
             var title = new Label();
             title.SetBinding(Label.TextProperty, "Title");   
             var topicLayout = CreateTopicLayout();
-            var viewLayout = new StackLayout()
-            {
-                Orientation = StackOrientation.Horizontal,
-                Children = {image, topicLayout} 
-            };
-            View = viewLayout;
+            //var viewLayout = new StackLayout()
+            //{
+            //    Orientation = StackOrientation.Horizontal,
+            //    Children = {topicLayout} 
+            //};
+            View = topicLayout;
             Text = title.Text;
         }
 
@@ -45,8 +45,8 @@ namespace Virgil
             };
 
             titleLabel.SetBinding(Label.TextProperty, "Title");
-            titleLabel.SetBinding(VisualElement.BackgroundColorProperty, "BackColor");
-            titleLabel.SetBinding(Label.TextColorProperty, "TextColor");
+            //titleLabel.SetBinding(VisualElement.BackgroundColorProperty, "BackColor");
+            //titleLabel.SetBinding(Label.TextColorProperty, "TextColor");
 
             var detailLabel = new Label
             {

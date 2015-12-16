@@ -13,9 +13,8 @@ namespace Virgil.ViewModels
     public class TopicsViewModel : ViewModelBase, INotifyPropertyChanged
     {
         public TopicsViewModel() : base()
-        {
-        }
-
+        {}
+        
         private ObservableCollection<Topic> myTopics;
 
         public ObservableCollection<Topic> MyTopics
@@ -45,16 +44,16 @@ namespace Virgil.ViewModels
             }
         }
 
-        public void Load()
+        public async void Load()
         {
             //escape if already loaded
             if (Topics != null)
             {
-                 return;
+                return;
             }
-               
+
             IsLoading = true;
-            var topicList = App.GetTopicManager().GetTopics();
+            var topicList = await App.GetTopicManager().GetTopics();
             ObservableCollection<Topic> collTopics = new ObservableCollection<Topic>();
             foreach (var t in topicList)
             {

@@ -10,7 +10,7 @@ namespace Virgil
 		public App ()
 		{
 			// root page 
-		    MainPage = new NavigationPage(new VirgilContentPage());
+		    this.MainPage = new NavigationPage(new VirgilContentPage());
 		}
 
 		protected override void OnStart ()
@@ -30,7 +30,7 @@ namespace Virgil
 
 	    public static TopicManager GetTopicManager()
 	    {
-	        return topicService ?? (topicService = new TopicManager(new Uri("http://surviveadmin.azurewebsites.net")));
+	        return topicService ?? (topicService = new TopicManager(new Uri("http://virgil.ftltech.org/")));
 	    }
 	}
 }
