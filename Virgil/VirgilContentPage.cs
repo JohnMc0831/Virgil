@@ -92,7 +92,7 @@ namespace Virgil
                             new Label()
                             {
                                 Text = "Hospital Patient Navigator",
-                                TextColor = Color.Silver,
+                                TextColor = Color.Pink,
                                 FontSize = 12
                             }
                         }
