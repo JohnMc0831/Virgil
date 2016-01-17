@@ -16,43 +16,64 @@ namespace Virgil
             var appIcon = new Image
             {
                 HorizontalOptions = LayoutOptions.Start,
+                VerticalOptions = LayoutOptions.Center,
                 Source = ImageSource.FromFile("waypoint.png"),
-                HeightRequest = 40
+                HeightRequest = 50
             };
 
             var title = new Label();
             title.SetBinding(Label.TextProperty, "Title");
 
             var topicLayout = CreateTopicLayout();
-
+            topicLayout.Spacing = 10f;
             var viewLayout = new StackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
-                Children = { appIcon, topicLayout }
+                Children = { appIcon, topicLayout },
+                Padding = new Thickness(10, 10, 10, 10)
             };
             View = viewLayout;
-            Text = title.Text;
-            
         }
 
         static StackLayout CreateTopicLayout()
         {           
             var titleLabel = new Label
             {
-                HorizontalOptions = LayoutOptions.StartAndExpand
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+                HeightRequest = 24f
             };
 
             titleLabel.SetBinding(Label.TextProperty, "Title");
-            titleLabel.TextColor = Color.Default;
+            titleLabel.TextColor = Color.FromRgb(0, 102, 204);
+            titleLabel.FontFamily = Device.OnPlatform(
+                iOS: "Avenir",
+                Android: "Droid Sans Mono",
+                WinPhone: "Ariel"
+            );
+
+            titleLabel.FontSize = Device.OnPlatform(
+                22,
+                Device.GetNamedSize(NamedSize.Medium, titleLabel),
+                Device.GetNamedSize(NamedSize.Large, titleLabel)
+            );
 
             var detailLabel = new Label
             {
-                HorizontalOptions = LayoutOptions.StartAndExpand,
-                FontSize = Device.OnPlatform(10f, 10f, 10f),
-                TextColor = Color.Gray
+                FontSize = Device.OnPlatform(12f, 12f, 12f),
+                HeightRequest = 14f,
+                FontAttributes = FontAttributes.Italic,
+                TextColor = Color.FromRgb(160,160,160),
             };              
 
             detailLabel.SetBinding(Label.TextProperty, "Summary");
+
+            //var spacer = new BoxView {Color = Color.Transparent, HeightRequest = 15};
+            var fooLabel = new Label
+            {
+                HeightRequest = 10f,
+                Text = "Foo!",
+                HorizontalOptions = LayoutOptions.StartAndExpand,
+            };
 
             var topicLayout = new StackLayout()
             {

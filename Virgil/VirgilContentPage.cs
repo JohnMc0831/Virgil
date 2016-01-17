@@ -13,7 +13,7 @@ namespace Virgil
     public class VirgilContentPage : ContentPage
     {
         private Command refreshTopicsCommand;
-
+        
         public TopicsViewModel TopicsViewModel { get; set; }
     
         public Command RefreshTopicsCommand
@@ -29,9 +29,7 @@ namespace Virgil
             IsBusy = true;
             var list = (ListView) sender;
             list.IsRefreshing = true;
-            //Load Topics
             TopicsViewModel.Load();
-
             list.ItemsSource = null;  //force a refresh of the listview.  See Xamarin bug #26418 discussed here: https://forums.xamarin.com/discussion/18631/listview-binding-to-observablecollection-does-not-update-gui/p1
             list.ItemsSource = TopicsViewModel.Topics;
             list.IsRefreshing = false;
@@ -50,20 +48,12 @@ namespace Virgil
             {
                 File = "HPN.png"
             };
-
-            Grid grid = new Grid();
-            grid.VerticalOptions = LayoutOptions.FillAndExpand;
-            grid.RowDefinitions.Add(new RowDefinition()
-            {
-                Height = GridLength.Auto
-            });
-            
+           
             TopicsViewModel = new TopicsViewModel();
-            //TODO:  Add loading page here...
             TopicsViewModel.Load();
             var topicsListView = new ListView()
             {
-                RowHeight = 40,
+                RowHeight = 60,
                 ItemTemplate = new DataTemplate(typeof (TopicCell)),
                 ItemsSource = TopicsViewModel.Topics,
                 IsPullToRefreshEnabled = true
@@ -74,8 +64,6 @@ namespace Virgil
                 var topic = (Topic) e.SelectedItem;
                 await Navigation.PushAsync(new VirgilTopicPage(topic));
             };
-
-            grid.Children.Add(topicsListView);
 
             var titleStack = new StackLayout
             {
@@ -108,6 +96,7 @@ namespace Virgil
 
             this.Content = new StackLayout
             {
+                Padding = new Thickness(0,0,0,10),
                 Children =
                 {
                     topicsListView
