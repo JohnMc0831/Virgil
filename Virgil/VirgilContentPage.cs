@@ -30,7 +30,6 @@ namespace Virgil
             var list = (ListView) sender;
             list.IsRefreshing = true;
             TopicsViewModel.Load();
-            list.ItemsSource = null;  //force a refresh of the listview.  See Xamarin bug #26418 discussed here: https://forums.xamarin.com/discussion/18631/listview-binding-to-observablecollection-does-not-update-gui/p1
             list.ItemsSource = TopicsViewModel.Topics;
             list.IsRefreshing = false;
             IsBusy = false;
@@ -63,29 +62,6 @@ namespace Virgil
             {
                 var topic = (Topic) e.SelectedItem;
                 await Navigation.PushAsync(new VirgilTopicPage(topic));
-            };
-
-            var titleStack = new StackLayout
-            {
-                Orientation = StackOrientation.Horizontal,
-                HorizontalOptions = LayoutOptions.StartAndExpand,
-                Spacing = 10,
-                Children =
-                {
-                    new StackLayout
-                    {
-                        Orientation = StackOrientation.Horizontal,
-                        HorizontalOptions = LayoutOptions.StartAndExpand,
-                        Children = {
-                            new Label()
-                            {
-                                Text = "Hospital Patient Navigator",
-                                TextColor = Color.Pink,
-                                FontSize = 12
-                            }
-                        }
-                    }
-                }
             };
 
             if (Device.OS == TargetPlatform.iOS)

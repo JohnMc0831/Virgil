@@ -16,9 +16,8 @@ namespace Virgil
             var appIcon = new Image
             {
                 HorizontalOptions = LayoutOptions.Start,
-                VerticalOptions = LayoutOptions.Center,
-                Source = ImageSource.FromFile("waypoint.png"),
-                HeightRequest = 50
+                VerticalOptions = LayoutOptions.StartAndExpand,
+                Source = ImageSource.FromFile("waypoint.png")
             };
 
             var title = new Label();
@@ -66,14 +65,6 @@ namespace Virgil
             };              
 
             detailLabel.SetBinding(Label.TextProperty, "Summary");
-
-            //var spacer = new BoxView {Color = Color.Transparent, HeightRequest = 15};
-            var fooLabel = new Label
-            {
-                HeightRequest = 10f,
-                Text = "Foo!",
-                HorizontalOptions = LayoutOptions.StartAndExpand,
-            };
 
             var topicLayout = new StackLayout()
             {

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virgil", "Virgil\Virgil.csproj", "{34981736-70AB-4774-A664-0F45794CD390}"
 EndProject
@@ -33,8 +33,8 @@ Global
 		{34981736-70AB-4774-A664-0F45794CD390}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{89B3C396-483B-4B1A-91D5-50D27019D681}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
 		{89B3C396-483B-4B1A-91D5-50D27019D681}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
-		{89B3C396-483B-4B1A-91D5-50D27019D681}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{89B3C396-483B-4B1A-91D5-50D27019D681}.Debug|iPhone.Build.0 = Debug|iPhone
+		{89B3C396-483B-4B1A-91D5-50D27019D681}.Debug|iPhone.ActiveCfg = AppStore|iPhone
+		{89B3C396-483B-4B1A-91D5-50D27019D681}.Debug|iPhone.Build.0 = AppStore|iPhone
 		{89B3C396-483B-4B1A-91D5-50D27019D681}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{89B3C396-483B-4B1A-91D5-50D27019D681}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{89B3C396-483B-4B1A-91D5-50D27019D681}.Release|Any CPU.ActiveCfg = Release|iPhone
@@ -57,8 +57,6 @@ Global
 		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Release|iPhone.Build.0 = Release|Any CPU
-		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Release|iPhone.Deploy.0 = Release|Any CPU
 		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
