@@ -17,7 +17,7 @@ namespace Virgil
             {
                 HorizontalOptions = LayoutOptions.Start,
                 VerticalOptions = LayoutOptions.StartAndExpand,
-                Source = ImageSource.FromFile("waypoint.png")
+                Source = ImageSource.FromFile("PatientSafe-25x25.png")
             };
 
             var title = new Label();

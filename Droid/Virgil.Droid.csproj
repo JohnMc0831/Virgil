@@ -116,15 +116,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
-    <AndroidResource Include="Resources\drawable\Icon.png" />
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\drawable\PatientSafe.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\PatientSafe.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\PatientSafe.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\PatientSafe.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Virgil\Virgil.csproj">

@@ -42,10 +42,10 @@ namespace Virgil
 
         public VirgilContentPage()
         {
-            Title = "Hospital Patient Navigator";
+            Title = "PatientSafe";
             Icon = new FileImageSource
             {
-                File = "HPN.png"
+                File = "PatientSafe-40x40.png"
             };
            
             TopicsViewModel = new TopicsViewModel();
