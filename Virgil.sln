@@ -43,6 +43,7 @@ Global
 		{89B3C396-483B-4B1A-91D5-50D27019D681}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{89B3C396-483B-4B1A-91D5-50D27019D681}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{89B3C396-483B-4B1A-91D5-50D27019D681}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
+		{89B3C396-483B-4B1A-91D5-50D27019D681}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EADC90C1-6090-42CD-A819-ECB6D0F18605}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -62,5 +63,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		version = 1.0
 	EndGlobalSection
 EndGlobal

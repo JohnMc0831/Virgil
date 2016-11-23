@@ -3313,7 +3313,7 @@ namespace Virgil.Droid
 			public const int notification_template_icon_bg = 2130837604;
 			
 			// aapt resource value: 0x7f020063
-			public const int PatientSafe = 2130837603;
+			public const int PatientAider = 2130837603;
 			
 			static Drawable()
 			{

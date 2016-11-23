@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF287433-77D5-46F6-84D8-00AE94150085}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ThemeSample</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>ThemeSample</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchI18n>
+    </MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <BuildIpa>true</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="BizappTheme.iOS">
+      <HintPath>../../../lib\/ios-unified/BizappTheme.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="BizappTheme.Controls.iOS.FXLabel">
+      <HintPath>../../../lib\/ios-unified/BizappTheme.Controls.iOS.FXLabel.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\arrow.png" />
+    <BundleResource Include="Resources\avatar.png" />
+    <BundleResource Include="Resources\avatar%402x.png" />
+    <BundleResource Include="Resources\bg-splash.png" />
+    <BundleResource Include="Resources\bg-splash%402x.png" />
+    <BundleResource Include="Resources\button-splash-pressed.png" />
+    <BundleResource Include="Resources\button-splash-pressed%402x.png" />
+    <BundleResource Include="Resources\button-splash.png" />
+    <BundleResource Include="Resources\button-splash%402x.png" />
+    <BundleResource Include="Resources\chats.png" />
+    <BundleResource Include="Resources\chats%402x.png" />
+    <BundleResource Include="Resources\Clock.png" />
+    <BundleResource Include="Resources\Default-Landscape.png" />
+    <BundleResource Include="Resources\Default-Landscape%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\email.png" />
+    <BundleResource Include="Resources\email%402x.png" />
+    <BundleResource Include="Resources\fb.png" />
+    <BundleResource Include="Resources\fb%402x.png" />
+    <BundleResource Include="Resources\friends.png" />
+    <BundleResource Include="Resources\friends%402x.png" />
+    <BundleResource Include="Resources\hand.png" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\input.png" />
+    <BundleResource Include="Resources\input%402x.png" />
+    <BundleResource Include="Resources\ipad-tab-mask.png" />
+    <BundleResource Include="Resources\ipad-tab-mask%402x.png" />
+    <BundleResource Include="Resources\list-divider.png" />
+    <BundleResource Include="Resources\list-divider%402x.png" />
+    <BundleResource Include="Resources\list-item-bottom.png" />
+    <BundleResource Include="Resources\list-item-bottom%402x.png" />
+    <BundleResource Include="Resources\list-item-middle.png" />
+    <BundleResource Include="Resources\list-item-middle%402x.png" />
+    <BundleResource Include="Resources\list-item-top.png" />
+    <BundleResource Include="Resources\list-item-top%402x.png" />
+    <BundleResource Include="Resources\send-email.png" />
+    <BundleResource Include="Resources\send-email%402x.png" />
+    <BundleResource Include="Resources\service-1.png" />
+    <BundleResource Include="Resources\service-2.png" />
+    <BundleResource Include="Resources\service-3.png" />
+    <BundleResource Include="Resources\service-4.png" />
+    <BundleResource Include="Resources\service-5.png" />
+    <BundleResource Include="Resources\service-6.png" />
+    <BundleResource Include="Resources\service-main-1.jpg" />
+    <BundleResource Include="Resources\service-main-2.jpg" />
+    <BundleResource Include="Resources\service-main-3.jpg" />
+    <BundleResource Include="Resources\settings.png" />
+    <BundleResource Include="Resources\settings%402x.png" />
+    <BundleResource Include="Resources\tab-mask.png" />
+    <BundleResource Include="Resources\tab-mask%402x.png" />
+    <BundleResource Include="Resources\talk.png" />
+    <BundleResource Include="Resources\talk%402x.png" />
+    <BundleResource Include="Resources\tool-email.png" />
+    <BundleResource Include="Resources\tool-email%402x.png" />
+    <BundleResource Include="Resources\tool-share.png" />
+    <BundleResource Include="Resources\tool-share%402x.png" />
+    <BundleResource Include="Resources\tool-thumbs.png" />
+    <BundleResource Include="Resources\tool-thumbs%402x.png" />
+    <BundleResource Include="Resources\top-gradient.png" />
+    <BundleResource Include="Resources\top-gradient%402x.png" />
+    <BundleResource Include="Resources\tweet.png" />
+    <BundleResource Include="Resources\tweet%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Repository\DataLoader.cs" />
+    <Compile Include="Repository\Model.cs" />
+    <Compile Include="Repository\Update.cs" />
+    <Compile Include="UI\iPad\DetailThemeiPadController.cs" />
+    <Compile Include="UI\iPad\DetailThemeiPadController.designer.cs" />
+    <Compile Include="UI\iPad\ScrollTabVIew.cs" />
+    <Compile Include="UI\iPhone\DetailThemeController.cs" />
+    <Compile Include="UI\iPhone\DetailThemeController.designer.cs" />
+    <Compile Include="UI\iPhone\ElementThemeController.cs" />
+    <Compile Include="UI\iPhone\ElementThemeController.designer.cs" />
+    <Compile Include="UI\iPhone\GridViewCell.cs" />
+    <Compile Include="UI\iPhone\GridViewController.cs" />
+    <Compile Include="UI\iPhone\GridViewController.designer.cs" />
+    <Compile Include="UI\iPhone\SplashViewController.cs" />
+    <Compile Include="UI\iPhone\SplashViewController.designer.cs" />
+    <Compile Include="UI\iPhone\ThemeListCell.cs" />
+    <Compile Include="UI\iPhone\ThemeListCell.designer.cs" />
+    <Compile Include="UI\iPhone\ThemeListController.cs" />
+    <Compile Include="UI\iPhone\ThemeListController.designer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Repository\" />
+    <Folder Include="UI\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="UI\iPad\MainStoryboard_iPad.storyboard" />
+    <InterfaceDefinition Include="UI\iPhone\MainStoryboard_iPhone.storyboard" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

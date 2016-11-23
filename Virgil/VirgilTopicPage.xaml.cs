@@ -9,7 +9,7 @@ namespace Virgil
 	{
 		public VirgilTopicPage ()
 		{
-			
+
 		}
 
 	    public VirgilTopicPage(Topic topic)
@@ -24,7 +24,7 @@ namespace Virgil
             var htmlSource = new HtmlWebViewSource();
 	        string htmlBody = @"<!DOCTYPE html><html lang='en' xmlns='http://www.w3.org/1999/xhtml'>" +
 	                          "<head><meta charset='utf-8' /><title></title>" +
-	                          "<link rel='stylesheet' type='text/css' href='https://virgil.ftltech.org/Content/bootstrap.css'>" +
+                              "<link rel='stylesheet' type='text/css' href='https://virgil.ftltech.org/Content/bootstrap.css'>" +
 	                          "<link rel='stylesheet' type='text/css' href='https://virgil.ftltech.org/Content/flatty.css'>" +
 	                          "</head><body>" + topic.Body +
 	                          "</body></html>";

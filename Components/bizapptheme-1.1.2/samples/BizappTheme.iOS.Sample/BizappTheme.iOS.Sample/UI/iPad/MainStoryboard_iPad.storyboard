@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" promptedForUpgradeToXcode5="NO" initialViewController="2">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Themei Pad Controller-->
+        <scene sceneID="4">
+            <objects>
+                <viewController id="2" customClass="DetailThemeiPadController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="dvJ-sS-T7f" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nnJ-O8-UmS"/>
+                                    <barButtonItem image="tool-email.png" id="Vbq-3L-ZQq"/>
+                                    <barButtonItem image="tool-thumbs.png" id="gKb-gl-uc5"/>
+                                    <barButtonItem image="tool-share.png" id="vSO-Lv-BCG"/>
+                                </items>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <inset key="insetFor6xAndEarlier" minX="0" minY="0" maxX="0" maxY="0"/>
+                            </toolbar>
+                            <view contentMode="scaleToFill" id="yn7-q6-hDa" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="62" width="768" height="745"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Family Law : Make sure you make the right choice" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="3Gq-ek-Wxc" fixedFrame="YES">
+                                        <rect key="frame" x="35" y="9" width="374" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="By John Doe / Posted under:" lineBreakMode="tailTruncation" minimumFontSize="10" id="XG1-RU-IVb" fixedFrame="YES">
+                                        <rect key="frame" x="35" y="86" width="193" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Family Law" lineBreakMode="tailTruncation" minimumFontSize="10" id="jw7-Yt-1SW" fixedFrame="YES">
+                                        <rect key="frame" x="236" y="86" width="173" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" red="0.11764705882352941" green="0.56470588235294117" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" id="bgG-72-h7Q" fixedFrame="YES">
+                                        <rect key="frame" x="35" y="126" width="374" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="Y7w-xb-Jlb" fixedFrame="YES">
+                                        <rect key="frame" x="439" y="9" width="295" height="119"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <webView contentMode="scaleToFill" id="tgr-kh-ODs" fixedFrame="YES">
+                                        <rect key="frame" x="35" y="152" width="699" height="589"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </webView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="XWs-Rj-jY0" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="814" width="768" height="210"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="UTK-ht-XTg" fixedFrame="YES">
+                                        <rect key="frame" x="0.0" y="0.0" width="768" height="210"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </scrollView>
+                                    <view contentMode="scaleToFill" id="7IX-Tg-Rzk" fixedFrame="YES">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="articleContentView" destination="tgr-kh-ODs" id="aan-Ur-FVj"/>
+                        <outlet property="articleImageView" destination="Y7w-xb-Jlb" id="t7V-Pw-MM4"/>
+                        <outlet property="expandBarButton" destination="vSO-Lv-BCG" id="RWu-W5-DX4"/>
+                        <outlet property="gradientView" destination="7IX-Tg-Rzk" id="ykp-bX-QQS"/>
+                        <outlet property="likeBarButton" destination="gKb-gl-uc5" id="d7x-Zg-BQy"/>
+                        <outlet property="mainContainerView" destination="yn7-q6-hDa" id="HWN-wr-3mo"/>
+                        <outlet property="metaLabel" destination="jw7-Yt-1SW" id="QaN-Lu-0q4"/>
+                        <outlet property="scrollView" destination="UTK-ht-XTg" id="ct9-iK-FRQ"/>
+                        <outlet property="shareBarButton" destination="Vbq-3L-ZQq" id="kBa-Mb-z9b"/>
+                        <outlet property="subContainerView" destination="XWs-Rj-jY0" id="OLr-cu-FP7"/>
+                        <outlet property="titleLabel" destination="3Gq-ek-Wxc" id="xht-8Q-CmX"/>
+                        <outlet property="toolbar" destination="dvJ-sS-T7f" id="TmU-e9-5ai"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tool-email.png" width="20" height="20"/>
+        <image name="tool-share.png" width="21" height="20"/>
+        <image name="tool-thumbs.png" width="22" height="20"/>
+        <image name="Clock.png" width="14" height="14"/>
+        <image name="Default-568h.png" width="640" height="1136"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="arrow.png" width="106" height="22"/>
+        <image name="avatar.png" width="55" height="55"/>
+        <image name="bg-splash.png" width="320" height="480"/>
+        <image name="chats.png" width="29" height="28"/>
+        <image name="email.png" width="29" height="24"/>
+        <image name="fb.png" width="13" height="13"/>
+        <image name="friends.png" width="38" height="27"/>
+        <image name="hand.png" width="142" height="149"/>
+        <image name="send-email.png" width="28" height="24"/>
+        <image name="service-1.png" width="290" height="200"/>
+        <image name="service-2.png" width="265" height="149"/>
+        <image name="service-3.png" width="263" height="149"/>
+        <image name="service-4.png" width="264" height="157"/>
+        <image name="service-5.png" width="263" height="157"/>
+        <image name="service-6.png" width="265" height="155"/>
+        <image name="service-main-1.jpg" width="700" height="250"/>
+        <image name="service-main-2.jpg" width="350" height="271"/>
+        <image name="service-main-3.jpg" width="480" height="318"/>
+        <image name="settings.png" width="27" height="27"/>
+        <image name="talk.png" width="30" height="28"/>
+        <image name="tweet.png" width="13" height="13"/>
+        <image name="button-splash-pressed.png" width="276" height="52"/>
+        <image name="button-splash.png" width="276" height="52"/>
+        <image name="list-item-bottom.png" width="320" height="77"/>
+        <image name="list-item-middle.png" width="320" height="77"/>
+        <image name="list-item-top.png" width="320" height="78"/>
+        <image name="tab-mask.png" width="142" height="111"/>
+        <image name="top-gradient.png" width="320" height="9"/>
+        <image name="ipad-tab-mask.png" width="223" height="168"/>
+        <image name="input.png" width="257" height="34"/>
+        <image name="list-divider.png" width="307" height="1"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default-Landscape.png" width="1024" height="748"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

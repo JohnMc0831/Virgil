@@ -9,6 +9,7 @@
     <RootNamespace>Virgil.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>VirgiliOS</AssemblyName>
+    <ReleaseVersion>1.0</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,7 +29,7 @@
     </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType>full</DebugType>
+    <DebugType></DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -37,9 +38,9 @@
     </CodesignEntitlements>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Distribution</CodesignKey>
-    <CodesignProvision>62263311-88f8-4070-abb9-5f824eb97bf4</CodesignProvision>
-    <MtouchSdkVersion>9.2</MtouchSdkVersion>
+    <CodesignKey>iPhone Developer: John McConnell (9A8B842U5Q)</CodesignKey>
+    <CodesignProvision></CodesignProvision>
+    <MtouchSdkVersion>10.1</MtouchSdkVersion>
     <BuildIpa>True</BuildIpa>
     <IpaIncludeArtwork>False</IpaIncludeArtwork>
     <CodesignResourceRules />
@@ -80,7 +81,7 @@
     <CodesignEntitlements />
     <CodesignResourceRules />
     <CodesignExtraArgs />
-    <MtouchSdkVersion>9.2</MtouchSdkVersion>
+    <MtouchSdkVersion></MtouchSdkVersion>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>False</MtouchDebug>
     <MtouchProfiling>False</MtouchProfiling>
@@ -97,39 +98,30 @@
     <IpaIncludeArtwork>False</IpaIncludeArtwork>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ProlificTheme.Controls.iOS.ProgressBar">
-      <HintPath>..\Components\prolifictheme-1.4.1\lib\ios-unified\ProlificTheme.Controls.iOS.ProgressBar.dll</HintPath>
-    </Reference>
-    <Reference Include="ProlificTheme.Controls.iOS.SegmentedControl">
-      <HintPath>..\Components\prolifictheme-1.4.1\lib\ios-unified\ProlificTheme.Controls.iOS.SegmentedControl.dll</HintPath>
-    </Reference>
-    <Reference Include="ProlificTheme.Controls.iOS.Switch">
-      <HintPath>..\Components\prolifictheme-1.4.1\lib\ios-unified\ProlificTheme.Controls.iOS.Switch.dll</HintPath>
-    </Reference>
-    <Reference Include="ProlificTheme.iOS">
-      <HintPath>..\Components\prolifictheme-1.4.1\lib\ios-unified\ProlificTheme.iOS.dll</HintPath>
-    </Reference>
-    <Reference Include="ProlificTheme.Utils.iOS">
-      <HintPath>..\Components\prolifictheme-1.4.1\lib\ios-unified\ProlificTheme.Utils.iOS.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="Xamarin.Forms.Platform.iOS">
-      <HintPath>..\packages\Xamarin.Forms.2.0.1.6505\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Forms.Core">
-      <HintPath>..\packages\Xamarin.Forms.2.0.1.6505\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Forms.Xaml">
-      <HintPath>..\packages\Xamarin.Forms.2.0.1.6505\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.2.3.2.127\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Platform">
-      <HintPath>..\packages\Xamarin.Forms.2.0.1.6505\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Forms.2.3.2.127\lib\Xamarin.iOS10\Xamarin.Forms.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Platform.iOS">
+      <HintPath>..\packages\Xamarin.Forms.2.3.2.127\lib\Xamarin.iOS10\Xamarin.Forms.Platform.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Forms.Xaml">
+      <HintPath>..\packages\Xamarin.Forms.2.3.2.127\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
     <Reference Include="Calabash">
-      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.18.0\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.20.3\lib\Xamarin.iOS10\Calabash.dll</HintPath>
+    </Reference>
+    <Reference Include="BizappTheme.Controls.iOS.FXLabel">
+      <HintPath>..\Components\bizapptheme-1.1.2\lib\ios-unified\BizappTheme.Controls.iOS.FXLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="BizappTheme.iOS">
+      <HintPath>..\Components\bizapptheme-1.1.2\lib\ios-unified\BizappTheme.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -152,30 +144,15 @@
     <BundleResource Include="Resources\FTL.png" />
     <BundleResource Include="Resources\PatientSafe-40x40.png" />
     <BundleResource Include="Resources\PatientSafe-25x25.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <XamarinComponentReference Include="prolifictheme">
-      <Version>1.4.1</Version>
-      <Visible>False</Visible>
-    </XamarinComponentReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\HPN.png" />
+    <BundleResource Include="Resources\PatientAider-29x29.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\waypoint.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\HPN-512x512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\HPN-1024x1024.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Resources\Default-320x480.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Forms.2.0.1.6505\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.0.1.6505\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
   <ItemGroup>
     <ImageAsset Include="Resources/Images.xcassets/AppIcons.appiconset/HPN-120x120.png">
       <InProject>false</InProject>
@@ -390,27 +367,6 @@
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\FTL-2048x1536 copy.png">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-87x87.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-120x120.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-57x57.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-180x180.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-40x40.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-72x72.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-114x114.png">
-      <InProject>false</InProject>
-    </ImageAsset>
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\PSMFTL-640x960.png">
       <InProject>false</InProject>
     </ImageAsset>
@@ -444,42 +400,36 @@
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\PSMFTL-2048x1496.png">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-29x29.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-58x58.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-80x80.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-50x50.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-100x100.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-144x144.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-76x76.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-152x152.png">
-      <InProject>false</InProject>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientSafe-167x167.png">
-      <InProject>false</InProject>
-    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-29x29.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-58x58.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider87x87.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-80x80.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAide57x57.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider114x114.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAide120x120.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-180x180.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-40x40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-50x50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-100x100.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-72x72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-144x144.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-76x76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-152x152.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-167x167.png" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Default-568h%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BundleResource Include="Default-568h.png" />
   </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="bizapptheme">
+      <Version>1.1.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <Import Project="..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
 </Project>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="bizapptheme">
+  <name>Bizapp Theme</name>
+  <publisher>Xamarin</publisher>
+  <publisher-url>http://xamarin.com/</publisher-url>
+  <version>1.1.2</version>
+  <summary>Simple application sample that demonstrates rich features of applications styling in iOS.</summary>
+  <screenshots>
+    <img src="screenshots/00.png" title="00" />
+    <img src="screenshots/01.png" title="01" />
+    <img src="screenshots/02.png" title="02" />
+  </screenshots>
+  <samples>
+    <sample id="BizappTheme.iOS.Sample">
+      <name>iOS Sample</name>
+      <summary>iOS Sample</summary>
+    </sample>
+    <sample id="BizappTheme.iOS.Sample-Classic">
+      <name>iOS Sample Classic</name>
+      <summary>iOS Sample Classic</summary>
+    </sample>
+  </samples>
+</component>

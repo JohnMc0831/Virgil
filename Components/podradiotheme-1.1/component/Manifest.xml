@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="podradiotheme">
+  <name>Podradio Theme</name>
+  <publisher>Xamarin Inc</publisher>
+  <publisher-url>http://www.xamarin.com/</publisher-url>
+  <version>1.1</version>
+  <summary>Simple application sample that demonstrates rich features of applications styling in iOS.</summary>
+  <screenshots>
+    <img src="screenshots/00.png" title="00" />
+    <img src="screenshots/01.png" title="01" />
+    <img src="screenshots/02.png" title="02" />
+  </screenshots>
+  <samples>
+    <sample id="PodradioTheme.iOs.Sample">
+      <name>iOS Sample Unified</name>
+      <summary>iOS Sample Unified</summary>
+    </sample>
+    <sample id="PodradioTheme.iOs.Sample-Classic">
+      <name>iOS Sample Classic</name>
+      <summary>iOS Sample Classic</summary>
+    </sample>
+  </samples>
+</component>

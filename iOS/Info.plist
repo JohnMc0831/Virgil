@@ -13,12 +13,10 @@
 	</array>
 	<key>UIRequiresFullScreen</key>
 	<string>YES</string>
-	<key>CFBundleIdentifier</key>
-	<string>org.ftltech.hpn</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>MinimumOSVersion</key>
-	<string>9.2</string>
+	<string>10.1</string>
 	<key>UIDeviceFamily</key>
 	<array>
 		<integer>1</integer>
@@ -53,10 +51,14 @@
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Images.xcassets/LaunchImage.launchimage</string>
 	<key>CFBundleName</key>
-	<string>PatientSafe</string>
-	<key>CFBundleShortVersionString</key>
-	<string>2.0</string>
+	<string>PatientAider</string>
+	<key>CFBundleDisplayName</key>
+	<string>PatientAider</string>
 	<key>CFBundleVersion</key>
-	<string>3.0</string>
+	<string>1.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.ftltech.patientaider</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
 </dict>
 </plist>

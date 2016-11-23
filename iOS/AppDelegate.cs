@@ -16,9 +16,10 @@ namespace Virgil.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-            ProlificTheme.Apply();
-            return base.FinishedLaunching (app, options);
+			BizappTheme.Apply();
+            return base.FinishedLaunching(app, options);
 		}
 	}
 }
+
 

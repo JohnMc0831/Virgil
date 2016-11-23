@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" promptedForUpgradeToXcode5="NO" initialViewController="amc-jS-yuT" variant="6xAndEarlier">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller - About-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="SplashViewController" sceneMemberID="viewController" extendedLayoutIncludesOpaqueBars="NO">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg-splash.png" id="YAP-5F-FLj" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Attorney Biz" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="dU3-2h-H2J" customClass="FXLabel" fixedFrame="YES">
+                                <rect key="frame" x="14" y="11" width="280" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="2"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="A short description goes here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="VeD-Nv-A7X" fixedFrame="YES">
+                                <rect key="frame" x="42" y="91" width="238" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.078431372549019607" green="0.25490196078431371" blue="0.51764705882352935" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Copyright 2012 Attorney Biz All Rights Reserved" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" id="i0N-vm-cTx" fixedFrame="YES">
+                                <rect key="frame" x="22" y="379" width="269" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.078431372550000003" green="0.25490196079999999" blue="0.51764705879999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ycu-Op-ysw" fixedFrame="YES">
+                                <rect key="frame" x="22" y="259" width="276" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Call Us" backgroundImage="button-splash.png">
+                                    <color key="titleColor" red="0.37254901960784315" green="0.44313725490196076" blue="0.49411764705882355" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="Call Us" backgroundImage="button-splash-pressed.png"/>
+                                <state key="highlighted" title="Call Us" backgroundImage="button-splash-pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5Nl-Hf-zc1" fixedFrame="YES">
+                                <rect key="frame" x="22" y="319" width="276" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="Directions" backgroundImage="button-splash.png">
+                                    <color key="titleColor" red="0.37254901959999998" green="0.4431372549" blue="0.4941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="Directions" backgroundImage="button-splash-pressed.png"/>
+                                <state key="highlighted" title="Directions" backgroundImage="button-splash-pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="chats.png" id="Sw7-fb-6vi"/>
+                    <navigationItem key="navigationItem" id="0sY-fm-IDe"/>
+                    <connections>
+                        <outlet property="callUsButt" destination="ycu-Op-ysw" id="name-outlet-ycu-Op-ysw"/>
+                        <outlet property="directionsButton" destination="5Nl-Hf-zc1" id="5ZT-nl-yqI"/>
+                        <outlet property="logoLabel" destination="dU3-2h-H2J" id="Uuu-dU-gch"/>
+                    </connections>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826" y="109"/>
+        </scene>
+        <!--Grid View Controller-->
+        <scene sceneID="SoA-ya-WBd">
+            <objects>
+                <viewController id="rX8-Yv-rWT" customClass="GridViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i6Y-SJ-fo1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="top-gradient.png" id="UTe-J7-cL7" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xko-Ho-2pY"/>
+                    <connections>
+                        <segue destination="bPE-xv-X75" kind="push" identifier="detail" id="Zac-mo-GrX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="btu-Tw-9Ie" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="743"/>
+        </scene>
+        <!--Detail Theme Controller-->
+        <scene sceneID="UY9-nn-S3a">
+            <objects>
+                <viewController id="bPE-xv-X75" customClass="DetailThemeController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9w3-IU-2fM">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="M3K-h5-X7u" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Family Law: Make the right Choice" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" id="3OM-pf-a3U" fixedFrame="YES">
+                                        <rect key="frame" x="10" y="-1" width="300" height="61"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="service-main-1.jpg" id="q2T-wK-C5Z" fixedFrame="YES">
+                                        <rect key="frame" x="0.0" y="57" width="320" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="By John Doe / Posted under:" lineBreakMode="tailTruncation" minimumFontSize="10" id="4Q8-KI-h8d" fixedFrame="YES">
+                                        <rect key="frame" x="10" y="168" width="170" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Family Law" lineBreakMode="tailTruncation" minimumFontSize="10" id="7qM-2Z-U66" fixedFrame="YES">
+                                        <rect key="frame" x="183" y="168" width="117" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.11764705882352941" green="0.56470588235294117" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" id="Uly-Kk-vTU" fixedFrame="YES">
+                                        <rect key="frame" x="10" y="322" width="300" height="2"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <webView contentMode="scaleToFill" scalesPageToFit="YES" id="r0Q-hT-meT" fixedFrame="YES">
+                                        <rect key="frame" x="10" y="203" width="300" height="700"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </webView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0gA-bg-pXm"/>
+                    <connections>
+                        <outlet property="articleContentView" destination="r0Q-hT-meT" id="9Nl-zG-VBR"/>
+                        <outlet property="articleImageView" destination="q2T-wK-C5Z" id="L8d-ZJ-Qwa"/>
+                        <outlet property="metaLabel" destination="7qM-2Z-U66" id="f0e-HH-UYt"/>
+                        <outlet property="scrollView" destination="M3K-h5-X7u" id="Q6o-7V-Afp"/>
+                        <outlet property="titleLabel" destination="3OM-pf-a3U" id="tHN-iL-54d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hfg-Wt-dL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898" y="743"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ULF-1C-tb0">
+            <objects>
+                <tabBarController id="amc-jS-yuT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="beq-jR-Fnr">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="NjZ-O4-eUe"/>
+                        <segue destination="jc2-hv-0UI" kind="relationship" relationship="viewControllers" id="TDV-i9-p8I"/>
+                        <segue destination="WRT-lg-Uiv" kind="relationship" relationship="viewControllers" id="wmF-Q0-MbW"/>
+                        <segue destination="6LR-Mr-dga" kind="relationship" relationship="viewControllers" id="9V9-dt-tP4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5YJ-YV-l2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136" y="109"/>
+        </scene>
+        <!--Theme List Controller-->
+        <scene sceneID="N3t-DP-Ekv">
+            <objects>
+                <viewController id="QKy-iU-Rvc" customClass="ThemeListController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ovy-br-ewj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="367"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="RPq-Xr-XtY" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="12" width="320" height="365"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThemeListCellTop" rowHeight="78" id="Jbp-LV-h1K" customClass="ThemeListCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jbp-LV-h1K" id="g4g-uz-NKp">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="list-item-top.png" id="A31-om-lUu" fixedFrame="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="avatar.png" id="yjr-lS-5ME" fixedFrame="YES">
+                                                    <rect key="frame" x="20" y="12" width="54" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="fb.png" id="WTi-s3-PZY" fixedFrame="YES">
+                                                    <rect key="frame" x="287" y="9" width="13" height="13"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0.5m attorneys in US" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="ayx-bL-533" fixedFrame="YES">
+                                                    <rect key="frame" x="84" y="5" width="173" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The BBC have released a report that claims there are half a million attorneys" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" id="OgB-wE-Ebp" fixedFrame="YES">
+                                                    <rect key="frame" x="85" y="43" width="222" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.41176470588235292" green="0.41960784313725491" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="bbc.com/ John Doe" lineBreakMode="tailTruncation" minimumFontSize="10" id="maZ-OK-yZ6" fixedFrame="YES">
+                                                    <rect key="frame" x="85" y="22" width="173" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.63529411764705879" green="0.65098039215686276" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="list-divider.png" id="Fpe-pU-06F" fixedFrame="YES">
+                                                    <rect key="frame" x="7" y="78" width="306" height="1"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="maZ-OK-yZ6" id="kTD-vx-qQQ"/>
+                                            <outlet property="avatarImageView" destination="yjr-lS-5ME" id="H01-Ae-MbD"/>
+                                            <outlet property="titleLabel" destination="ayx-bL-533" id="UPu-ii-2HI"/>
+                                            <outlet property="updateLabel" destination="OgB-wE-Ebp" id="DEa-9t-Lqu"/>
+                                            <outlet property="updateTypeImageview" destination="WTi-s3-PZY" id="zFV-hJ-lb7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThemeListCellMiddle" rowHeight="77" id="j1s-VQ-hYw" customClass="ThemeListCell">
+                                        <rect key="frame" x="0.0" y="100" width="320" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="j1s-VQ-hYw" id="Y6j-rd-NhD">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="list-item-middle.png" id="rrQ-YB-q7n" fixedFrame="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="avatar.png" id="2tq-hh-XPD" fixedFrame="YES">
+                                                    <rect key="frame" x="20" y="12" width="54" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="fb.png" id="v9K-Lm-UDR" fixedFrame="YES">
+                                                    <rect key="frame" x="287" y="9" width="13" height="13"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0.5m attorneys in US" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="m0X-iN-lh9" fixedFrame="YES">
+                                                    <rect key="frame" x="84" y="5" width="173" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The BBC have released a report that claims there are half a million attorneys" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" id="lB5-Un-gTp" fixedFrame="YES">
+                                                    <rect key="frame" x="85" y="44" width="222" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.41176470590000003" green="0.41960784309999999" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="bbc.com/ John Doe" lineBreakMode="tailTruncation" minimumFontSize="10" id="iUD-cp-UPm" fixedFrame="YES">
+                                                    <rect key="frame" x="85" y="22" width="173" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.63529411759999999" green="0.65098039220000004" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="list-divider.png" id="NtP-8t-5NO" fixedFrame="YES">
+                                                    <rect key="frame" x="7" y="78" width="306" height="1"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="iUD-cp-UPm" id="Ky8-h9-DhM"/>
+                                            <outlet property="avatarImageView" destination="2tq-hh-XPD" id="QoC-nX-tgq"/>
+                                            <outlet property="titleLabel" destination="m0X-iN-lh9" id="mWm-Be-MOA"/>
+                                            <outlet property="updateLabel" destination="lB5-Un-gTp" id="Pib-HS-zrh"/>
+                                            <outlet property="updateTypeImageview" destination="v9K-Lm-UDR" id="cBe-Jr-KAt"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThemeListCellBottom" rowHeight="77" id="2Cb-sR-i9g" customClass="ThemeListCell">
+                                        <rect key="frame" x="0.0" y="177" width="320" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Cb-sR-i9g" id="e1W-ew-rIV">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="list-item-bottom.png" id="EXq-Yk-cqI" fixedFrame="YES">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="78"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="avatar.png" id="pM6-kY-zXC" fixedFrame="YES">
+                                                    <rect key="frame" x="20" y="12" width="54" height="54"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="fb.png" id="G0F-8Q-TZf" fixedFrame="YES">
+                                                    <rect key="frame" x="287" y="9" width="13" height="13"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0.5m attorneys in US" lineBreakMode="tailTruncation" minimumFontSize="10" adjustsFontSizeToFit="NO" id="HXa-Gr-KGy" fixedFrame="YES">
+                                                    <rect key="frame" x="84" y="5" width="173" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="The BBC have released a report that claims there are half a million attorneys" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" id="o4u-Tp-adB" fixedFrame="YES">
+                                                    <rect key="frame" x="85" y="44" width="222" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.41176470590000003" green="0.41960784309999999" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="bbc.com/ John Doe" lineBreakMode="tailTruncation" minimumFontSize="10" id="cR1-ex-9Eq" fixedFrame="YES">
+                                                    <rect key="frame" x="85" y="22" width="173" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" red="0.63529411759999999" green="0.65098039220000004" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="cR1-ex-9Eq" id="k9a-sZ-HaE"/>
+                                            <outlet property="avatarImageView" destination="pM6-kY-zXC" id="ghv-bE-Sy2"/>
+                                            <outlet property="titleLabel" destination="HXa-Gr-KGy" id="SSI-Ij-uux"/>
+                                            <outlet property="updateLabel" destination="o4u-Tp-adB" id="ZF6-zU-J0z"/>
+                                            <outlet property="updateTypeImageview" destination="G0F-8Q-TZf" id="UAR-Xc-4uX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="top-gradient.png" id="O9t-WY-5Xl" fixedFrame="YES">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wMh-Lm-tKl"/>
+                    <connections>
+                        <outlet property="tableListView" destination="RPq-Xr-XtY" id="m4S-Iy-Ntj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e37-r1-doA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1350" y="1399"/>
+        </scene>
+        <!--Navigation Controller - Services-->
+        <scene sceneID="M8g-FU-UUz">
+            <objects>
+                <navigationController id="jc2-hv-0UI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Services" image="settings.png" id="PIP-m1-6SW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ylr-Y4-pTU">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rX8-Yv-rWT" kind="relationship" relationship="rootViewController" id="SRn-kt-oaY"/>
+                    </connections>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tjq-Ca-gp5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824" y="743"/>
+        </scene>
+        <!--Navigation Controller - Updates-->
+        <scene sceneID="wef-12-hrv">
+            <objects>
+                <navigationController id="WRT-lg-Uiv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Updates" image="send-email.png" id="pBw-XV-UE3"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="sWY-eg-ugN">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="QKy-iU-Rvc" kind="relationship" relationship="rootViewController" id="0bZ-Nt-Vc3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCZ-zE-Hmk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824" y="1394"/>
+        </scene>
+        <!--Element Theme Controller - Elements-->
+        <scene sceneID="XFn-Wx-zfc">
+            <objects>
+                <viewController id="6LR-Mr-dga" customClass="ElementThemeController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zlr-Cc-CR6">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text input" minimumFontSize="17" background="input.png" id="zSR-Sy-xNc" fixedFrame="YES">
+                                <rect key="frame" x="17" y="45" width="287" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6LR-Mr-dga" id="a0i-qk-52B"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Elements" image="friends.png" id="9AE-GB-G9L"/>
+                    <connections>
+                        <outlet property="textField" destination="zSR-Sy-xNc" id="IV9-7u-a9G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yj4-UD-Lx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826" y="2012"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="avatar.png" width="55" height="55"/>
+        <image name="bg-splash.png" width="320" height="480"/>
+        <image name="button-splash-pressed.png" width="276" height="52"/>
+        <image name="button-splash.png" width="276" height="52"/>
+        <image name="chats.png" width="29" height="28"/>
+        <image name="fb.png" width="13" height="13"/>
+        <image name="friends.png" width="38" height="27"/>
+        <image name="input.png" width="257" height="34"/>
+        <image name="list-divider.png" width="307" height="1"/>
+        <image name="list-item-bottom.png" width="320" height="77"/>
+        <image name="list-item-middle.png" width="320" height="77"/>
+        <image name="list-item-top.png" width="320" height="78"/>
+        <image name="send-email.png" width="28" height="24"/>
+        <image name="service-main-1.jpg" width="700" height="250"/>
+        <image name="settings.png" width="27" height="27"/>
+        <image name="top-gradient.png" width="320" height="9"/>
+        <image name="Clock.png" width="14" height="14"/>
+        <image name="Default-568h.png" width="640" height="1136"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon.png" width="57" height="57"/>
+        <image name="arrow.png" width="106" height="22"/>
+        <image name="email.png" width="29" height="24"/>
+        <image name="hand.png" width="142" height="149"/>
+        <image name="service-1.png" width="290" height="200"/>
+        <image name="service-2.png" width="265" height="149"/>
+        <image name="service-3.png" width="263" height="149"/>
+        <image name="service-4.png" width="264" height="157"/>
+        <image name="service-5.png" width="263" height="157"/>
+        <image name="service-6.png" width="265" height="155"/>
+        <image name="service-main-2.jpg" width="350" height="271"/>
+        <image name="service-main-3.jpg" width="480" height="318"/>
+        <image name="talk.png" width="30" height="28"/>
+        <image name="tool-email.png" width="20" height="20"/>
+        <image name="tool-share.png" width="21" height="20"/>
+        <image name="tool-thumbs.png" width="22" height="20"/>
+        <image name="tweet.png" width="13" height="13"/>
+        <image name="tab-mask.png" width="142" height="111"/>
+        <image name="ipad-tab-mask.png" width="223" height="168"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default-Landscape.png" width="1024" height="748"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

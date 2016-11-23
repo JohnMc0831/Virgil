@@ -13,9 +13,9 @@ namespace Virgil
     public class VirgilContentPage : ContentPage
     {
         private Command refreshTopicsCommand;
-        
+
         public TopicsViewModel TopicsViewModel { get; set; }
-    
+
         public Command RefreshTopicsCommand
         {
             get
@@ -38,16 +38,16 @@ namespace Virgil
         private void ExecuteTopicRefreshCommand()
         {
             OnRefresh(this, new EventArgs());
-        } 
+        }
 
         public VirgilContentPage()
         {
-            Title = "PatientSafe";
-            Icon = new FileImageSource
-            {
-                File = "PatientSafe-40x40.png"
-            };
-           
+            Title = "PatientAider";
+            //Icon = new FileImageSource
+            //{
+            //    File = "PatientSafe-40x40.png"
+            //};
+
             TopicsViewModel = new TopicsViewModel();
             TopicsViewModel.Load();
             var topicsListView = new ListView()

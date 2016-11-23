@@ -1,121 +1,121 @@
 {
   "images": [
     {
-      "filename": "PatientSafe-29x29.png",
+      "filename": "PatientAider-29x29.png",
       "size": "29x29",
       "scale": "1x",
       "idiom": "iphone"
     },
     {
-      "filename": "PatientSafe-58x58.png",
+      "filename": "PatientAider-58x58.png",
       "size": "29x29",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
-      "filename": "PatientSafe-87x87.png",
+      "filename": "PatientAider87x87.png",
       "size": "29x29",
       "scale": "3x",
       "idiom": "iphone"
     },
     {
-      "filename": "PatientSafe-80x80.png",
+      "filename": "PatientAider-80x80.png",
       "size": "40x40",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
-      "filename": "PatientSafe-120x120.png",
+      "filename": "PatientAider120x120.png",
       "size": "40x40",
       "scale": "3x",
       "idiom": "iphone"
     },
     {
-      "filename": "PatientSafe-57x57.png",
+      "filename": "PatientAide57x57.png",
       "size": "57x57",
       "scale": "1x",
       "idiom": "iphone"
     },
     {
-      "filename": "PatientSafe-114x114.png",
+      "filename": "PatientAider114x114.png",
       "size": "57x57",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
-      "filename": "PatientSafe-120x120.png",
+      "filename": "PatientAide120x120.png",
       "size": "60x60",
       "scale": "2x",
       "idiom": "iphone"
     },
     {
-      "filename": "PatientSafe-180x180.png",
+      "filename": "PatientAider-180x180.png",
       "size": "60x60",
       "scale": "3x",
       "idiom": "iphone"
     },
     {
-      "filename": "PatientSafe-29x29.png",
+      "filename": "PatientAider-29x29.png",
       "size": "29x29",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
-      "filename": "PatientSafe-58x58.png",
+      "filename": "PatientAider-58x58.png",
       "size": "29x29",
       "scale": "2x",
       "idiom": "ipad"
     },
     {
-      "filename": "PatientSafe-40x40.png",
+      "filename": "PatientAider-40x40.png",
       "size": "40x40",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
-      "filename": "PatientSafe-80x80.png",
+      "filename": "PatientAider-80x80.png",
       "size": "40x40",
       "scale": "2x",
       "idiom": "ipad"
     },
     {
-      "filename": "PatientSafe-50x50.png",
+      "filename": "PatientAider-50x50.png",
       "size": "50x50",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
-      "filename": "PatientSafe-100x100.png",
+      "filename": "PatientAider-100x100.png",
       "size": "50x50",
       "scale": "2x",
       "idiom": "ipad"
     },
     {
-      "filename": "PatientSafe-167x167.png",
+      "filename": "PatientAider-167x167.png",
       "size": "83.5x83.5",
       "scale": "2x",
       "idiom": "ipad"
     },
     {
-      "filename": "PatientSafe-72x72.png",
+      "filename": "PatientAider-72x72.png",
       "size": "72x72",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
-      "filename": "PatientSafe-144x144.png",
+      "filename": "PatientAider-144x144.png",
       "size": "72x72",
       "scale": "2x",
       "idiom": "ipad"
     },
     {
-      "filename": "PatientSafe-76x76.png",
+      "filename": "PatientAider-76x76.png",
       "size": "76x76",
       "scale": "1x",
       "idiom": "ipad"
     },
     {
-      "filename": "PatientSafe-152x152.png",
+      "filename": "PatientAider-152x152.png",
       "size": "76x76",
       "scale": "2x",
       "idiom": "ipad"
