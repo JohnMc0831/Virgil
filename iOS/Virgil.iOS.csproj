@@ -29,7 +29,8 @@
     </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
-    <DebugType></DebugType>
+    <DebugType>
+    </DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -39,7 +40,8 @@
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer: John McConnell (9A8B842U5Q)</CodesignKey>
-    <CodesignProvision></CodesignProvision>
+    <CodesignProvision>
+    </CodesignProvision>
     <MtouchSdkVersion>10.1</MtouchSdkVersion>
     <BuildIpa>True</BuildIpa>
     <IpaIncludeArtwork>False</IpaIncludeArtwork>
@@ -81,7 +83,8 @@
     <CodesignEntitlements />
     <CodesignResourceRules />
     <CodesignExtraArgs />
-    <MtouchSdkVersion></MtouchSdkVersion>
+    <MtouchSdkVersion>
+    </MtouchSdkVersion>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>False</MtouchDebug>
     <MtouchProfiling>False</MtouchProfiling>
@@ -400,23 +403,57 @@
     <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\PSMFTL-2048x1496.png">
       <InProject>false</InProject>
     </ImageAsset>
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-29x29.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-58x58.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider87x87.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-80x80.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider120x120.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAide57x57.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider114x114.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAide120x120.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-180x180.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-40x40.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-50x50.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-100x100.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-72x72.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-144x144.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-76x76.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-152x152.png" />
-    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-167x167.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-29x29.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-58x58.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider87x87.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-80x80.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider120x120.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAide57x57.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider114x114.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAide120x120.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-180x180.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-40x40.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-50x50.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-100x100.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-72x72.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-144x144.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-76x76.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-152x152.png">
+      <InProject>false</InProject>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\PatientAider-167x167.png">
+      <InProject>false</InProject>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="iTunesArtwork" />

@@ -20,7 +20,7 @@ namespace Virgil
 
             //Bind the topic to the view using a WebView component to render the HTML.
             Title = topic.Title;
-            var webView = new WebView();
+            this.webView = new WebView();
             var htmlSource = new HtmlWebViewSource();
 	        string htmlBody = @"<!DOCTYPE html><html lang='en' xmlns='http://www.w3.org/1999/xhtml'>" +
 	                          "<head><meta charset='utf-8' /><title></title>" +
@@ -29,9 +29,32 @@ namespace Virgil
 	                          "</head><body>" + topic.Body +
 	                          "</body></html>";
 	        htmlSource.Html = htmlBody;
-            webView.Source = htmlSource;
+            this.webView.Source = htmlSource;
 	        this.Content = webView;
 	    }
-	}
+
+        public WebView webView { get; set; }
+
+        private void backClicked(object sender, EventArgs e)
+        {
+            // Check to see if there is anywhere to go back to
+            if (webView.CanGoBack)
+            {
+                webView.GoBack();
+            }
+            else
+            { // If not, leave the view
+                Navigation.PopAsync();
+            }
+        }
+
+        private void forwardClicked(object sender, EventArgs e)
+        {
+            if (webView.CanGoForward)
+            {
+                webView.GoForward();
+            }
+        }
+    }
 }
 

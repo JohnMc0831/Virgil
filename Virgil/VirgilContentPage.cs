@@ -43,11 +43,6 @@ namespace Virgil
         public VirgilContentPage()
         {
             Title = "PatientAider";
-            //Icon = new FileImageSource
-            //{
-            //    File = "PatientSafe-40x40.png"
-            //};
-
             TopicsViewModel = new TopicsViewModel();
             TopicsViewModel.Load();
             var topicsListView = new ListView()
@@ -58,10 +53,11 @@ namespace Virgil
                 IsPullToRefreshEnabled = true
             };
             topicsListView.Refreshing += OnRefresh;
-            topicsListView.ItemSelected += async (sender, e) =>
+            topicsListView.ItemTapped += async (sender, e) =>
             {
-                var topic = (Topic) e.SelectedItem;
+                var topic = (Topic) e.Item;
                 await Navigation.PushAsync(new VirgilTopicPage(topic));
+                
             };
 
             if (Device.OS == TargetPlatform.iOS)
@@ -69,6 +65,40 @@ namespace Virgil
                 // move layout under the status bar
                this.Padding = new Thickness(0, 20, 0, 0);
             }
+
+            //Construct navigation bar
+            //    <StackLayout>
+            //    <StackLayout Orientation="Horizontal" Padding="10,10">
+            //        <Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="backClicked" />
+            //        <Button Text="Forward" HorizontalOptions="End" Clicked="forwardClicked" />
+            //    </StackLayout>
+            //</StackLayout>
+
+            var backButton = new Button
+            {
+                Text = "Back",
+                HorizontalOptions = LayoutOptions.StartAndExpand
+            };
+            backButton.Clicked += OnBackButtonClicked;
+            var forwardButton = new Button
+            {
+                Text = "Forward",
+                HorizontalOptions = LayoutOptions.End
+            };
+            forwardButton.Clicked += OnForwardButtonClicked;
+
+            var navBar = new StackLayout
+            {
+                Orientation = StackOrientation.Horizontal,
+                Padding = new Thickness(10, 10),
+                Children =
+                {
+                   backButton,
+                   forwardButton
+                }
+                
+            };
+
 
             this.Content = new StackLayout
             {
@@ -78,6 +108,16 @@ namespace Virgil
                     topicsListView
                 }
             };
+        }
+
+        void OnBackButtonClicked(object sender, EventArgs e)
+        {
+
+        }
+
+        void OnForwardButtonClicked(object sender, EventArgs e)
+        {
+
         }
     }
 }
