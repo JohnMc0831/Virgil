@@ -10,7 +10,7 @@ using Xamarin.Forms;
 
 namespace Virgil
 {
-    public class VirgilContentPage : ContentPage
+    public class VirgilContentPage : WaitingPage
     {
         private Command refreshTopicsCommand;
 
@@ -37,7 +37,11 @@ namespace Virgil
 
         private void ExecuteTopicRefreshCommand()
         {
+            Indicator.IsRunning = true;
+            Indicator.IsVisible = true;
             OnRefresh(this, new EventArgs());
+            Indicator.IsRunning = false;
+            Indicator.IsVisible = false;
         }
 
         public VirgilContentPage()
@@ -65,41 +69,7 @@ namespace Virgil
                 // move layout under the status bar
                this.Padding = new Thickness(0, 20, 0, 0);
             }
-
-            //Construct navigation bar
-            //    <StackLayout>
-            //    <StackLayout Orientation="Horizontal" Padding="10,10">
-            //        <Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="backClicked" />
-            //        <Button Text="Forward" HorizontalOptions="End" Clicked="forwardClicked" />
-            //    </StackLayout>
-            //</StackLayout>
-
-            var backButton = new Button
-            {
-                Text = "Back",
-                HorizontalOptions = LayoutOptions.StartAndExpand
-            };
-            backButton.Clicked += OnBackButtonClicked;
-            var forwardButton = new Button
-            {
-                Text = "Forward",
-                HorizontalOptions = LayoutOptions.End
-            };
-            forwardButton.Clicked += OnForwardButtonClicked;
-
-            var navBar = new StackLayout
-            {
-                Orientation = StackOrientation.Horizontal,
-                Padding = new Thickness(10, 10),
-                Children =
-                {
-                   backButton,
-                   forwardButton
-                }
-                
-            };
-
-
+            
             this.Content = new StackLayout
             {
                 Padding = new Thickness(0,0,0,10),
@@ -108,16 +78,24 @@ namespace Virgil
                     topicsListView
                 }
             };
+
+            LoadingMessage = "Loading Topics...";
+            ShowLoadingFrame = true;
+            ShowLoadingMessage = true;
+            ShadeBackground = true;
+            WaitingOrientation = StackOrientation.Vertical;
         }
 
-        void OnBackButtonClicked(object sender, EventArgs e)
+
+        protected override async void OnAppearing()
         {
-
-        }
-
-        void OnForwardButtonClicked(object sender, EventArgs e)
-        {
-
+            base.OnAppearing();
+            if (TopicsViewModel.Topics.Count == 0)
+            {
+                IsWaiting = true;
+                await Task.Delay(3000);
+                IsWaiting = false;
+            }
         }
     }
 }
