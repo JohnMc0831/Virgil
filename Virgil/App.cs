@@ -9,8 +9,8 @@ namespace Virgil
 	    private static TopicManager topicService;
 		public App ()
 		{
-			// root page 
-		    MainPage = new NavigationPage(new VirgilContentPage());
+            // root page 
+            MainPage = new NavigationPage(new VirgilContentPage());
 		}
 
 		protected override void OnStart ()

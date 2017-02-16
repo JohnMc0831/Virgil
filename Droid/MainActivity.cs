@@ -16,9 +16,12 @@ namespace Virgil.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            //var toolbar = FindViewById<Toolbar>(Resource.Id.toolbar);
+            //SetActionBar(toolbar);
+            //ActionBar.Title = "PatientAider";
             LoadApplication(new App());
+
         }
     }
 }

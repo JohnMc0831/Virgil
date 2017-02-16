@@ -79,7 +79,9 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="psmf_logo.png" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="VirgilTopicPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

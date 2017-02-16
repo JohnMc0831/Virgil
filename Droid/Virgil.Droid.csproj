@@ -121,6 +121,7 @@
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icons\psmf_logo.png" />
     <Content Include="Properties\AndroidManifest.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
@@ -130,6 +131,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\PatientAider.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\PatientAider.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\PatientAider.png" />
+    <Content Include="Resources\drawable\psmf_logo.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Virgil\Virgil.csproj">

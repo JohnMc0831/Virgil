@@ -22,11 +22,14 @@ namespace Virgil
             Title = topic.Title;
             this.webView = new WebView();
             var htmlSource = new HtmlWebViewSource();
-	        string htmlBody = @"<!DOCTYPE html><html lang='en' xmlns='http://www.w3.org/1999/xhtml'>" +
+            //Adding banner image for Patient Safety Movement per customer request. 2/16/2017.  JRM
+            string banner = "<a href='http://patientsafetymovement.org/'><img src='https://virgil.ftltech.org/Content/PatientSafetyMovement.png' style='margin:auto;display:block' alt='Patient Safety Movement' title='Patient Safety Movement'/></a>";
+
+            string htmlBody = @"<!DOCTYPE html><html lang='en' xmlns='http://www.w3.org/1999/xhtml'>" +
 	                          "<head><meta charset='utf-8' /><title></title>" +
                               "<link rel='stylesheet' type='text/css' href='https://virgil.ftltech.org/Content/bootstrap.css'>" +
 	                          "<link rel='stylesheet' type='text/css' href='https://virgil.ftltech.org/Content/flatty.css'>" +
-	                          "</head><body>" + topic.Body +
+	                          "</head><body>" + banner + topic.Body +
 	                          "</body></html>";
 	        htmlSource.Html = htmlBody;
             this.webView.Source = htmlSource;

@@ -46,6 +46,11 @@ namespace Virgil
 
         public VirgilContentPage()
         {
+            var myContentPage = this;
+            //this.Push(myContentPage);
+
+            var s = "psmf_logo.png";
+            NavigationPage.SetTitleIcon(myContentPage, s);
             Title = "PatientAider";
             TopicsViewModel = new TopicsViewModel();
             TopicsViewModel.Load();
