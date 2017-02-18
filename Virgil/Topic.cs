@@ -16,6 +16,7 @@ namespace Virgil
         public string Title { get; set; }
         public string Summary { get; set; }
         public string Body { get; set; }
+        public string BodyGerman { get; set; }
         public string BackColor { get; set; }
         public string TextColor { get; set; }
         public virtual ICollection<Link> Links { get; set; }

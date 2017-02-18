@@ -46,16 +46,13 @@ namespace Virgil
 
         public VirgilContentPage()
         {
-            var myContentPage = this;
-            //this.Push(myContentPage);
 
-            var s = "psmf_logo.png";
-            NavigationPage.SetTitleIcon(myContentPage, s);
             Title = "PatientAider";
             TopicsViewModel = new TopicsViewModel();
             TopicsViewModel.Load();
             var topicsListView = new ListView()
             {
+
                 RowHeight = 60,
                 ItemTemplate = new DataTemplate(typeof (TopicCell)),
                 ItemsSource = TopicsViewModel.Topics,
@@ -65,19 +62,24 @@ namespace Virgil
             topicsListView.ItemTapped += async (sender, e) =>
             {
                 var topic = (Topic) e.Item;
-                await Navigation.PushAsync(new VirgilTopicPage(topic));
+                if (topic.Title == "Settings")
+                {
+                    await Navigation.PushAsync(new SettingsPage());
+                }
+                else
+                {
+                    await Navigation.PushAsync(new VirgilTopicPage(topic));
+                }
                 
             };
 
             if (Device.OS == TargetPlatform.iOS)
             {
-                // move layout under the status bar
-               this.Padding = new Thickness(0, 20, 0, 0);
+                Padding = new Thickness(0, 20, 0, 0);
             }
-            
+
             this.Content = new StackLayout
             {
-                Padding = new Thickness(0,0,0,10),
                 Children =
                 {
                     topicsListView

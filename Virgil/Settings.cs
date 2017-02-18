@@ -21,11 +21,10 @@ namespace Virgil.Helpers
 
     #region Setting Constants
 
-    private const string SettingsKey = "language_key";
+    private const string SettingsKey = "language";
     private static readonly string SettingsDefault = "English";
 
-    #endregion
-
+        #endregion
 
     public static string GeneralSettings
     {
@@ -37,6 +36,12 @@ namespace Virgil.Helpers
       {
         AppSettings.AddOrUpdateValue<string>(SettingsKey, value);
       }
+    }
+
+    public static string Language
+    {
+        get { return AppSettings.GetValueOrDefault<string>(SettingsKey, SettingsDefault); }
+        set { AppSettings.AddOrUpdateValue<string>(SettingsKey, value); }
     }
 
   }

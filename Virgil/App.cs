@@ -11,6 +11,7 @@ namespace Virgil
 		{
             // root page 
             MainPage = new NavigationPage(new VirgilContentPage());
+
 		}
 
 		protected override void OnStart ()
