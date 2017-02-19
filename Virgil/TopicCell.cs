@@ -10,9 +10,11 @@ namespace Virgil
 {
     class TopicCell : ViewCell
     {
+        public string Language { get; set; }
         public string Text { get; set; }
         public TopicCell()
         {
+            this.Language = Helpers.Settings.Language;
             var appIcon = new Image
             {
                 HorizontalOptions = LayoutOptions.Start,
@@ -21,7 +23,20 @@ namespace Virgil
             };
 
             var title = new Label();
-            title.SetBinding(Label.TextProperty, "Title");
+            //Title binding based on language
+            switch (Language)
+            {
+                case "Deutsch":
+                    title.SetBinding(Label.TextProperty, "TitleGerman");
+                    break;
+                case "English":
+                    title.SetBinding(Label.TextProperty, "Title");
+                    break;
+                default:
+                    title.SetBinding(Label.TextProperty, "Title");
+                    break;
+            }
+            
 
             var topicLayout = CreateTopicLayout();
             topicLayout.Spacing = 10f;
@@ -35,14 +50,28 @@ namespace Virgil
         }
 
         static StackLayout CreateTopicLayout()
-        {           
+        {
+            var Language = Helpers.Settings.Language;
             var titleLabel = new Label
             {
                 HorizontalOptions = LayoutOptions.StartAndExpand,
                 HeightRequest = 24f
             };
 
-            titleLabel.SetBinding(Label.TextProperty, "Title");
+            //Title binding based on language
+            switch (Language)
+            {
+                case "Deutsch":
+                    titleLabel.SetBinding(Label.TextProperty, "TitleGerman");
+                    break;
+                case "English":
+                    titleLabel.SetBinding(Label.TextProperty, "Title");
+                    break;
+                default:
+                    titleLabel.SetBinding(Label.TextProperty, "Title");
+                    break;
+            }
+
             titleLabel.TextColor = Color.FromRgb(0, 102, 204);
             titleLabel.FontFamily = Device.OnPlatform(
                 iOS: "Avenir",
@@ -62,10 +91,21 @@ namespace Virgil
                 HeightRequest = 14f,
                 FontAttributes = FontAttributes.Italic,
                 TextColor = Color.FromRgb(160,160,160),
-            };              
+            };
 
-            detailLabel.SetBinding(Label.TextProperty, "Summary");
-
+            switch (Language)
+            {
+                case "Deutsch":
+                    detailLabel.SetBinding(Label.TextProperty, "SummaryGerman");
+                    break;
+                case "English":
+                    detailLabel.SetBinding(Label.TextProperty, "Summary");
+                    break;
+                default:
+                    detailLabel.SetBinding(Label.TextProperty, "Summary");
+                    break;
+            }
+                      
             var topicLayout = new StackLayout()
             {
                 HorizontalOptions = LayoutOptions.StartAndExpand,

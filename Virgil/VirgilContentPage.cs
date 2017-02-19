@@ -14,6 +14,8 @@ namespace Virgil
     {
         private Command refreshTopicsCommand;
 
+        private ListView topicsListView { get; set; }
+
         public TopicsViewModel TopicsViewModel { get; set; }
 
         public Command RefreshTopicsCommand
@@ -27,11 +29,11 @@ namespace Virgil
         void OnRefresh(object sender, EventArgs e)
         {
             IsBusy = true;
-            var list = (ListView) sender;
-            list.IsRefreshing = true;
+            //var list = (ListView) sender;
+            topicsListView.IsRefreshing = true;
             TopicsViewModel.Load();
-            list.ItemsSource = TopicsViewModel.Topics;
-            list.IsRefreshing = false;
+            topicsListView.ItemsSource = TopicsViewModel.Topics;
+            topicsListView.IsRefreshing = false;
             IsBusy = false;
         }
 
@@ -50,9 +52,8 @@ namespace Virgil
             Title = "PatientAider";
             TopicsViewModel = new TopicsViewModel();
             TopicsViewModel.Load();
-            var topicsListView = new ListView()
+            topicsListView = new ListView()
             {
-
                 RowHeight = 60,
                 ItemTemplate = new DataTemplate(typeof (TopicCell)),
                 ItemsSource = TopicsViewModel.Topics,
@@ -86,7 +87,18 @@ namespace Virgil
                 }
             };
 
-            LoadingMessage = "Loading Topics...";
+            switch (Helpers.Settings.Language)
+            {
+                case "Deutsch":
+                    LoadingMessage = "Themen werden geladen...";
+                    break;
+                case "English":
+                    LoadingMessage = "Loading Topics...";
+                    break;
+                default:
+                    LoadingMessage = "Loading Topics...";
+                    break;
+            }
             ShowLoadingFrame = true;
             ShowLoadingMessage = true;
             ShadeBackground = true;
@@ -97,6 +109,25 @@ namespace Virgil
         protected override async void OnAppearing()
         {
             base.OnAppearing();
+            if(TopicsViewModel.Language != Helpers.Settings.Language)
+            {
+                //change of language so refresh...
+                TopicsViewModel.Language = Helpers.Settings.Language;
+                switch (TopicsViewModel.Language)
+                {
+                    case "Deutsch":
+                        LoadingMessage = "Themen werden geladen...";
+                        break;
+                    case "English":
+                        LoadingMessage = "Loading Topics...";
+                        break;
+                    default:
+                        LoadingMessage = "Loading Topics...";
+                        break;
+                }
+                this.ExecuteTopicRefreshCommand();
+            }
+
             if (TopicsViewModel.Topics.Count == 0)
             {
                 IsWaiting = true;

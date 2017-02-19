@@ -17,6 +17,8 @@ namespace Virgil.ViewModels
         
         private ObservableCollection<Topic> myTopics;
 
+        public string Language { get; set; }
+
         public ObservableCollection<Topic> MyTopics
         {
             get
@@ -46,6 +48,7 @@ namespace Virgil.ViewModels
 
         public async void Load()
         {
+            Language = Helpers.Settings.Language;
             Topics = new ObservableCollection<Topic>();
             var topicList = await App.GetTopicManager().GetTopics();
             foreach (var t in topicList)
