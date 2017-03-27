@@ -47,18 +47,13 @@
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <CodesignEntitlements>
-    </CodesignEntitlements>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Developer: John McConnell (9A8B842U5Q)</CodesignKey>
-    <CodesignProvision>
-    </CodesignProvision>
-    <MtouchSdkVersion>10.1</MtouchSdkVersion>
+    <CodesignKey>iPhone Distribution: John McConnell (E6D2CM6HYP)</CodesignKey>
+    <MtouchSdkVersion>10.2</MtouchSdkVersion>
     <BuildIpa>True</BuildIpa>
     <IpaIncludeArtwork>False</IpaIncludeArtwork>
-    <CodesignResourceRules />
-    <CodesignExtraArgs />
+    <CodesignProvision>ac95394a-89ab-4f65-963f-18b741ba7ed8</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -90,8 +85,8 @@
     </CodesignExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'AppStore|iPhone'">
-    <CodesignKey>iPhone Distribution</CodesignKey>
-    <CodesignProvision>62263311-88f8-4070-abb9-5f824eb97bf4</CodesignProvision>
+    <CodesignKey>iPhone Distribution: John McConnell (E6D2CM6HYP)</CodesignKey>
+    <CodesignProvision></CodesignProvision>
     <CodesignEntitlements />
     <CodesignResourceRules />
     <CodesignExtraArgs />

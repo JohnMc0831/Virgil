@@ -56,9 +56,9 @@
 	<string>PatientAider</string>
 	<key>CFBundleVersion</key>
 	<string>4.2</string>
-	<key>CFBundleIdentifier</key>
-	<string>org.ftltech.patientaider</string>
 	<key>CFBundleShortVersionString</key>
 	<string>2.3</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.ftltech.patientaider</string>
 </dict>
 </plist>

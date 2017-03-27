@@ -17,11 +17,12 @@ namespace Virgil
             InitializeComponent();
             
             settingsListView.ItemsSource = languages;
-            languageModel deutsch = new languageModel
-            {
-                Language = "Deutsch",
-                Flag = "deutsch.png"
-            };
+            //Commenting out German until deal is done...
+            //languageModel deutsch = new languageModel
+            //{
+            //    Language = "Deutsch",
+            //    Flag = "deutsch.png"
+            //};
 
             languageModel english = new languageModel
             {
@@ -41,7 +42,7 @@ namespace Virgil
                 await Navigation.PopToRootAsync();
             };
 
-            languages.Add(deutsch);
+            //languages.Add(deutsch);
             languages.Add(english);
             settingsListView.SelectedItem = languages.First(l => l.Language == Virgil.Helpers.Settings.Language);
         }
